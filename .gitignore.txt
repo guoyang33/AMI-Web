@@ -1,0 +1,5 @@
+*.rar
+*.docx
+*.pdf
+*.pptx
+/bootstrap-5.0.2-examples
