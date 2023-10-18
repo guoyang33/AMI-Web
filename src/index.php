@@ -5,20 +5,21 @@
  */
 require_once 'utils.php';
 $page = 'index';
-if (!isset($_GET['lang'])) {
-    header('Location: index.php?lang=zh_TW');
-    exit;
-}
-if ($_GET['lang'] == 'en') {
-    $lang = 'en';
-} else {
-    $lang = 'zh_TW';
-}
-$info = json_decode(file_get_contents('info.json'), true);
-$content = json_decode(file_get_contents("{$page}.json"), true);
+
+// 語言切換
+lang_param_detect();
+$lang = $_GET['lang'];
+
+// 載入文案content json
+$content = load_content_json();
+// 載入資訊文案info.json
+$info = json_decode(file_get_contents(CONTENT_JSON_DIR . 'info.json'), true);
 ?>
 <!doctype html>
-<html lang="en" class="h-100">
+<?php
+echo '<html lang="' . $lang . '" class="h-100">';
+?>
+<!-- <html lang="en" class="h-100"> -->
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,6 +42,9 @@ $content = json_decode(file_get_contents("{$page}.json"), true);
         <script type="text/javascript" src="assets/dist/js/bootstrap.bundle.min.js" async></script>
 
         <style>
+            /* body {
+                background: url(/assets/images/bg.png) 0 0;
+            } */
             .bd-placeholder-img {
                 font-size: 1.125rem;
                 text-anchor: middle;
@@ -87,7 +91,7 @@ $content = json_decode(file_get_contents("{$page}.json"), true);
                 </h1>
                 <!-- <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p> -->
                 <?php
-                foreach ($content[$lang]['contents'] as $content) {
+                foreach ($content['contents'] as $content) {
                     echo '<p class="lead">' . $content . '</p>';
                 }
                 ?>
@@ -100,6 +104,7 @@ $content = json_decode(file_get_contents("{$page}.json"), true);
             <footer class="mt-auto text-white-50">
                 <!-- 待去除 模板原生footer -->
                 <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+                <p>免責聲明：版權所有，請勿任意轉載作商業用途。</p>
             </footer>
         </div>
     </body>
