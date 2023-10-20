@@ -101,6 +101,10 @@ echo '<html lang="' . $lang . '" class="h-100">';
                 </p>
             </main>
 
+            <section class="page-section bg-secondary" id="product">
+                
+            </section>
+
             <footer class="mt-auto text-white-50">
                 <!-- 待去除 模板原生footer -->
                 <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
