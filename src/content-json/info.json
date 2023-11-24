@@ -3,12 +3,34 @@
         "light": "assets/images/logo.gif",
         "dark": "assets/images/logo-dark.gif"
     },
+    "header": {
+        "nav": {
+            "link": {
+                "en": {
+                    "products": "Products",
+                    "contact": "Contact",
+                    "about": "About"
+                },
+                "zh_TW": {
+                    "products": "產品",
+                    "contact": "聯絡",
+                    "about": "關於"
+                }
+            }
+        }
+    },
     "zh_TW": {
-        "title": "高展醫療用品有限公司",
-        "title_short": "高展醫療用品",
+        "title": "高展醫療用品",
+        "title_full": "高展醫療用品有限公司",
+        "title_short": "高展",
         "address": "80746高雄市三民區同盟三路246巷36號1樓",
         "tel": "07-312-0079",
         "fax": "07-312-0079",
+        "nav": {
+            "products": "產品",
+            "contact": "聯絡",
+            "about": "關於"
+        },
         "portal": {
             "contents": [
                 "我們是地區市場的領導者，致力於發揮主導作用，推動高科技醫療設備及藥物，快速進入目標市場"
@@ -127,10 +149,16 @@
         }
     },
     "en": {
-        "title": "Awesome Medical Inc.",
+        "title": "Awesome Medical",
+        "title_full": "Awesome Medical Inc.",
         "title_short": "AMI",
         "address": "1F, No. 36, Lane 246, Tong-Meng 3rd Road, San-Min District 80746, Kaohsiung City, Taiwan, Republic of China.",
         "tel": "+886-7-312-0079",
-        "fax": "+886-7-312-0079"
+        "fax": "+886-7-312-0079",
+        "nav": {
+            "products": "Products",
+            "contact": "Contact",
+            "about": "About"
+        }
     }
 }

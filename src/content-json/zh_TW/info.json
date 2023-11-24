@@ -1,0 +1,32 @@
+{
+    "title": "高展醫療用品",
+    "title_full": "高展醫療用品有限公司",
+    "title_short": "高展",
+    "description": "總部位於中華民國台灣省的高雄市，高展醫療用品事業有限公司（以下簡稱：高展醫療用品）是一家成立於2021年6月的醫療設備與藥品進出口經銷公司。",
+    "address": "80746高雄市三民區同盟三路246巷36號1樓",
+    "tel": "07-312-0079",
+    "fax": "07-312-0079",
+    "logo": "assets/images/logo.gif",
+    "logo_alt": "Awesome Medical Inc.",
+    "icon": "assets/images/icon.ico",
+    "header": {
+        "nav": {
+            "about": {
+                "link": "about.php",
+                "text": "關於"
+            },
+            "products": {
+                "link": "products.php",
+                "text": "產品"
+            },
+            "contact": {
+                "link": "contact.php",
+                "text": "聯絡我們"
+            },
+            "news": {
+                "link": "news.php",
+                "text": "醫學新知"
+            }
+        }
+    }
+}

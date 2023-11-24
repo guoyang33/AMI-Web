@@ -7,13 +7,16 @@ define('CONTENT_JSON_DIR', 'content-json/');
 define('LANG_DICT', array(
     'zh_TW' => array(
         'name' => '繁體中文',
-        'code' => 'zh_TW'
+        'code' => 'zh_TW',
+        'html_lang' => 'zh-Hant'
     ),
     'en' => array(
         'name' => 'English',
-        'code' => 'en'
+        'code' => 'en',
+        'html_lang' => 'en'
     )
 ));
+
 // 語言參數偵測
 function lang_param_detect() {
     global $page;
@@ -29,37 +32,31 @@ function lang_param_detect() {
         exit;
     }
 }
+// 載入info.json
+function load_info_json($lang) {
+    return json_decode(file_get_contents(CONTENT_JSON_DIR . $lang . '/info.json'), true);
+}
 // 載入文案content json；定義CONTENT_JSON常數及返回該常數
-function load_content_json() {
-    global $page;
-    global $lang;
+function load_content_json($lang) {
+    $page = basename($_SERVER['PHP_SELF'], '.php');
     if (!defined('CONTENT_JSON')) {
-        define('CONTENT_JSON', json_decode(file_get_contents(CONTENT_JSON_DIR.$page . '.json'), true)[$lang]);
+        define('CONTENT_JSON', json_decode(file_get_contents(CONTENT_JSON_DIR . $lang . '/' . $page . '.json'), true));
     }
     return CONTENT_JSON;
 }
-// 召喚語言切換選單
-function summon_lang_switch($lang, $page) {
-    echo '<div class="dropdown mx-3">';
-    echo '<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">';
-    echo $lang;
-    echo '</button>';
-    echo '<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">';
-    echo '<li><a class="dropdown-item" href="' . $page . '.php?lang=zh_TW">繁體中文</a></li>';
-    echo '<li><a class="dropdown-item" href="' . $page . '.php?lang=en">English</a></li>';
-    echo '</ul>';
-    echo '</div>';
-}
-// 召喚亮色模板語言切換選單
-function summon_lang_switch_light($lang, $page) {
-    echo '<div class="dropdown mx-3">';
-    echo '<button class="btn btn-light border-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">';
-    echo LANG_DICT[$lang]['name'];
-    echo '</button>';
-    echo '<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">';
-    echo '<li><a class="dropdown-item" href="' . $page . '.php?lang=zh_TW">繁體中文</a></li>';
-    echo '<li><a class="dropdown-item" href="' . $page . '.php?lang=en">English</a></li>';
-    echo '</ul>';
-    echo '</div>';
+// 顯示語言切換選單
+function show_lang_switch() {
+    echo '
+    <div class="dropdown dropdown-language-switch">
+        語言：
+        <button class="btn dropdown-toggle border" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="dropdown-text">Language</span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="?lang=zh_TW">繁體中文</a></li>
+            <li><a class="dropdown-item" href="?lang=en">English</a></li>
+        </ul>
+    </div>
+    ';
 }
 ?>

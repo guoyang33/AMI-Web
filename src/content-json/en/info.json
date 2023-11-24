@@ -1,0 +1,54 @@
+{
+    "title": "Awesome Medical",
+    "title_full": "Awesome Medical Inc.",
+    "title_short": "AMI",
+    "description": "AWESOME Medical Inc. (abbr. as AMI), a medical in-vitro device (IVD) and medicine import/ distribution company based in Kaohsiung city, Taiwan.",
+    "address": "1F, No. 36, Lane 246, Tong-Meng 3rd Road, San-Min District 80746, Kaohsiung City, Taiwan, Republic of China.",
+    "tel": "+886-7-312-0079",
+    "fax": "+886-7-312-0079",
+    "logo": "assets/images/logo.gif",
+    "logo_alt": "Awesome Medical Inc.",
+    "icon": "assets/images/icon.ico",
+    "header": {
+        "nav": {
+            "about": {
+                "link": "about.php",
+                "text": "ABOUT"
+            },
+            "products": {
+                "link": "products.php",
+                "text": "PRODUCTS"
+            },
+            "contact": {
+                "link": "contact.php",
+                "text": "CONTACT"
+            },
+            "news": {
+                "link": "news.php",
+                "text": "NEWS"
+            }
+        }
+    },
+    "home": {
+        "title": "Awesome Medical Inc.",
+        "lead": "We are a territory leader in medical equipment and medicines, committed to playing a leading role in driving access to target customers around the island.",
+        "text": "AWESOME Medical Inc. (abbr. as AMI), a medical in-vitro device (IVD) and medicine import/ distribution company based in Kaohsiung city, Taiwan.",
+        "button": {
+            "link": "#about",
+            "text": "Learn More"
+        },
+        "img": "assets/images/home.png",
+        "img_alt": "Awesome Medical Inc."
+    },
+    "about": {
+        "img":"assets/images/about.png",
+        "img_alt": "Awesome Medical Inc.",
+        "title": "About Awesome Medical Inc.",
+        "lead": "",
+        "text": "",
+        "button": {
+            "link": "#contact",
+            "text": "Contact Us"
+        }
+    }
+}
