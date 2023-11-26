@@ -59,4 +59,33 @@ function show_lang_switch() {
     </div>
     ';
 }
+// 顯示網頁header
+function web_header($info) {
+    echo '
+    <header class="page-header wrapper">
+        <h1>
+            <a href="index.php">
+                <img class="logo" src="' . $info['logo'] . '" alt="' . $info['logo_alt'] . '">
+            </a>
+        </h1>
+    ';
+    show_lang_switch();
+    echo '
+        <nav>
+            <ul class="main-nav">
+    ';
+    foreach ($info['header']['nav'] as $nav_item) {
+        echo '
+                <li>
+                    <a href="' . $nav_item['link'] . '">' . $nav_item['text'] . '</a>
+                </li>
+        ';
+    }
+    echo '
+            </ul>
+        </nav>
+    </header>
+    ';
+
+}
 ?>
