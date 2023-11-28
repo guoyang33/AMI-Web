@@ -110,3 +110,65 @@ img {
     top: 12px;
     right: 12px;
 }
+
+/* ABOUT
+----------------------------------------------- */
+#about {
+    /* background-image: url(../../images/about.png); */
+    height: 270px;
+    margin-bottom: 40px;
+}
+#about .page-title {
+    text-align: center;
+}
+.about-contents {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.about-info {
+    position: relative;
+    padding-top: 4px;
+    margin-bottom: 40px;
+}
+.about-title {
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-size: 2rem;
+    font-weight: normal;
+}
+.sub-menu {
+    margin-bottom: 60px;
+    list-style: none;
+}
+.sub-menu li {
+    border-bottom: 1px #06263D solid;
+}
+.sub-menu a {
+    color: #06263D;
+    padding: 10px;
+    display: block;     /* 讓連結的範圍擴大為整個項目 */
+}
+.sub-menu a:hover {
+    color: #69C8DF;
+}
+
+/* 頁尾
+----------------------------------------------- */
+footer{
+    background: #06263D;
+    text-align: center;
+    padding: 26px 0;
+}
+footer p {
+    color: #FCFFFB;
+    font-size: 0.875rem;
+}
+
+/* 報導部分 */
+article {
+    width: 74%;
+}
+/* 邊欄 */
+aside {
+    width: 22%;
+}
