@@ -11,7 +11,7 @@ echo '
 <body>
     <div id="home" class="big-bg">
 ';
-web_header($info);
+html_body_header($info);
 echo '
         <div class="home-content wrapper">
             <h2 class="page-title">' . $content['title'] . '</h2>
@@ -19,6 +19,7 @@ echo '
             <a class="button" href="' . $content['button']['link'] . '">' . $content['button']['text'] . '</a>
         </div><!-- /.home-content -->
     </div><!-- /#home -->
+</body>
 ';
 
 ?>
