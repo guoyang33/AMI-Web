@@ -8,7 +8,7 @@ define('LANG_DICT', array(
     'zh_TW' => array(
         'name' => '繁體中文',
         'code' => 'zh_TW',
-        'html_lang' => 'zh-Hant'
+        'html_lang' => 'zh-Hant-TW'
     ),
     'en' => array(
         'name' => 'English',
@@ -60,7 +60,7 @@ function show_lang_switch() {
     ';
 }
 // 顯示網頁header
-function web_header($info) {
+function html_body_header($info) {
     echo '
     <header class="page-header wrapper">
         <h1>
@@ -86,6 +86,17 @@ function web_header($info) {
         </nav>
     </header>
     ';
-
+}
+// 顯示網頁footer
+function html_body_footer($info) {
+    echo '
+    <footer>
+        <div class="wrapper">
+            <p>
+                <small>&copy; 2023 CYouLiao</small>
+            </p>
+        </div>
+    </footer>
+    ';
 }
 ?>
