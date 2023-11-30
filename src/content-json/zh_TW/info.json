@@ -6,9 +6,9 @@
     "address": "80746高雄市三民區同盟三路246巷36號1樓",
     "tel": "07-312-0079",
     "fax": "07-312-0079",
-    "logo": "assets/images/logo.gif",
+    "logo": "assets/brand/android-chrome-192x192.png",
     "logo_alt": "Awesome Medical Inc.",
-    "icon": "assets/images/icon.ico",
+    "icon": "assets/brand/favicon.ico",
     "header": {
         "nav": {
             "about": {

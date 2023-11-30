@@ -6,9 +6,9 @@
     "address": "1F, No. 36, Lane 246, Tong-Meng 3rd Road, San-Min District 80746, Kaohsiung City, Taiwan, Republic of China.",
     "tel": "+886-7-312-0079",
     "fax": "+886-7-312-0079",
-    "logo": "assets/images/logo.gif",
+    "logo": "assets/brand/android-chrome-192x192.png",
     "logo_alt": "Awesome Medical Inc.",
-    "icon": "assets/images/icon.ico",
+    "icon": "assets/brand/favicon.ico",
     "header": {
         "nav": {
             "about": {

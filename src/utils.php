@@ -2,6 +2,9 @@
 /*
  * utils.php
  * 通用工具函数
+ * 
+ * Changelog:
+ * --為配合PHP5伺服器，常數將不在函數中宣告 2023-11-30
  */
 define('CONTENT_JSON_DIR', 'content-json/');
 define('LANG_DICT', array(
@@ -39,10 +42,7 @@ function load_info_json($lang) {
 // 載入文案content json；定義CONTENT_JSON常數及返回該常數
 function load_content_json($lang) {
     $page = basename($_SERVER['PHP_SELF'], '.php');
-    if (!defined('CONTENT_JSON')) {
-        define('CONTENT_JSON', json_decode(file_get_contents(CONTENT_JSON_DIR . $lang . '/' . $page . '.json'), true));
-    }
-    return CONTENT_JSON;
+    return json_decode(file_get_contents(CONTENT_JSON_DIR . $lang . '/' . $page . '.json'), true);
 }
 // 顯示語言切換選單
 function show_lang_switch() {

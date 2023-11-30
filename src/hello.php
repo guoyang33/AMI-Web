@@ -10,4 +10,5 @@ echo "Hello World!";
 
 print(date_default_timezone_get());
 print(date("Y-m-d H:i:s"));
+phpinfo();
 ?>
