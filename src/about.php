@@ -35,7 +35,6 @@ echo '
         <div class="wrapper">
             <h2 class="page-title">' . $content['title'] . '</h2>
         </div><!-- /.wrapper -->
-    </div><!-- /#about -->
 ';
 // echo '
 //     <div class="about-contents wrapper">
@@ -46,6 +45,7 @@ echo $section_html;
 // ';
 html_body_footer($info);
 echo '
+    </div><!-- /#about -->
 </body>
 ';
 ?>
