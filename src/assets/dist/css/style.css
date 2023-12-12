@@ -26,7 +26,7 @@ aside {
     width: 22%;
 }
 /* 章節 */
-section {
+/* section {
     width: 74%;
     margin: auto;
     margin-top: 2%;
@@ -34,7 +34,7 @@ section {
 }
 section p {
     margin-bottom: 1rem;
-}
+} */
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
