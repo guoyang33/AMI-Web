@@ -37,11 +37,11 @@
             "link": "#about",
             "text": "Learn More"
         },
-        "img": "assets/images/home.png",
+        "img": "assets/img/home.png",
         "img_alt": "Awesome Medical Inc."
     },
     "about": {
-        "img":"assets/images/about.png",
+        "img":"assets/img/about.png",
         "img_alt": "Awesome Medical Inc.",
         "title": "About Awesome Medical Inc.",
         "lead": "",

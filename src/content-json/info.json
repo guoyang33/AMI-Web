@@ -1,7 +1,7 @@
 {
     "logo": {
-        "light": "assets/images/logo.gif",
-        "dark": "assets/images/logo-dark.gif"
+        "light": "assets/img/logo.gif",
+        "dark": "assets/img/logo-dark.gif"
     },
     "header": {
         "nav": {
@@ -137,7 +137,7 @@
                                     "contents": [
                                         {
                                             "tag": "img",
-                                            "src": "images/organization_zh-TW.png"
+                                            "src": "img/organization_zh-TW.png"
                                         }
                                     ]
                                 }

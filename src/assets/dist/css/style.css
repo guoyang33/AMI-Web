@@ -51,7 +51,7 @@ section p {
 /* HOME
 ----------------------------------------------- */
 #home {
-    /* background-image: url(../../images/home.png); */
+    /* background-image: url(../../img/home.png); */
     background-color: #FCFFFB;
     min-height: 100vh;
 }
@@ -102,7 +102,7 @@ section p {
 /* ABOUT
 ----------------------------------------------- */
 #about {
-    /* background-image: url(../../images/about.png); */
+    /* background-image: url(../../img/about.png); */
     height: 270px;
     margin-bottom: 40px;
 }
