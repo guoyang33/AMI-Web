@@ -36,57 +36,17 @@ section p {
     margin-bottom: 1rem;
 }
 
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+    [data-aos-delay] {
+      transition-delay: 0 !important;
+    }
+}  
+
 /* HEADER
 ----------------------------------------------- */
-.wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 4%;
-}
-.logo {
-    width: 128px;
-    margin-top: 14px;
-    margin-left: 12px;
-}
-.page-header a {
-    color: #06263D;
-}
-.page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-.header-function-bar {
-    /* display: flex; */
-    align-items: center;
-    height: fit-content;
-}
-.main-nav {
-    display: flex;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    /* margin-top: 34px; */
-    /* margin-right: 12px; */
-    list-style: none;
-}
-.main-nav li {
-    margin-left: 36px;
-    margin-bottom: 10px;
-}
-.main-nav a {
-    color: #06263D
-}
-.main-nav a:hover {
-    color: #69C8DF;
-}
-
-/* LANGUAGE SWITCH */
-.dropdown-language-switch {
-    display: inline-block;
-    /* position: absolute;
-    top: 12px;
-    right: 12px; */
-}
 
 /* HOME
 ----------------------------------------------- */
