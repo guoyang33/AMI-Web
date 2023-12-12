@@ -103,12 +103,16 @@ foreach ($content['about']['articles'] as $article) {
     ';
     if ($article['type'] == 'text') {
         echo '
-                    <p>' . $article['text'] . '</p>
+                <p>' . $article['text'] . '</p>
         ';
     } else if ($article['type'] == 'list') {
         foreach ($article['list'] as $list_item) {
             echo $list_item;
         }
+    } else if ($article['type'] == 'image') {
+        echo '
+                <img src="' . $article['src'] . '" alt="' . $article['alt'] . '">
+        ';
     }
     echo '
             </article>
@@ -116,6 +120,8 @@ foreach ($content['about']['articles'] as $article) {
 }
 echo '
         </section><!-- /#about -->
+        <section id="products">
+            <h1>' . $content['products']['title'] . '</h1>
 ';
 
 echo '

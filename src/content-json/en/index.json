@@ -67,7 +67,8 @@
             {
                 "title": "Company Structure",
                 "type": "image",
-                "image": "assets/img/structure_en.png"
+                "src": "assets/img/structure_en.png",
+                "alt": "Company Structure"
             }
         ]
     },
