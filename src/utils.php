@@ -7,22 +7,27 @@
  * --為配合PHP5伺服器，常數將不在函數中宣告 2023-11-30
  */
 define('CONTENT_JSON_DIR', 'content-json/');
-define('LANG_DICT', array(
-    'zh_TW' => array(
-        'name' => '繁體中文',
-        'code' => 'zh_TW',
-        'html_lang' => 'zh-Hant-TW'
-    ),
-    'en' => array(
-        'name' => 'English',
-        'code' => 'en',
-        'html_lang' => 'en'
-    )
-));
+
+function get_lang_dict() {
+    return array(
+        'zh_TW' => array(
+            'name' => '繁體中文',
+            'code' => 'zh_TW',
+            'html_lang' => 'zh-Hant-TW'
+        ),
+        'en' => array(
+            'name' => 'English',
+            'code' => 'en',
+            'html_lang' => 'en'
+        )
+    );
+}
 
 // 語言參數偵測
 function lang_param_detect() {
     global $page;
+
+    $lang_dict = get_lang_dict();
     if (!file_exists($page . '.php')) {
         $page = 'index';
     }
@@ -30,7 +35,7 @@ function lang_param_detect() {
         header('Location: ' . $page . '.php?lang=zh_TW');
         exit;
     }
-    if (!key_exists($_GET['lang'], LANG_DICT)) {
+    if (!key_exists($_GET['lang'], $lang_dict)) {
         header('Location: ' . $page . '.php?lang=zh_TW');
         exit;
     }
@@ -68,22 +73,24 @@ function html_body_header($info) {
                 <img class="logo" src="' . $info['logo'] . '" alt="' . $info['logo_alt'] . '">
             </a>
         </h1>
+        <div>
     ';
     show_lang_switch();
     echo '
-        <nav>
-            <ul class="main-nav">
+            <nav>
+                <ul class="main-nav">
     ';
     foreach ($info['header']['nav'] as $nav_item) {
         echo '
-                <li>
-                    <a href="' . $nav_item['link'] . '">' . $nav_item['text'] . '</a>
-                </li>
+                    <li>
+                        <a href="' . $nav_item['link'] . '">' . $nav_item['text'] . '</a>
+                    </li>
         ';
     }
     echo '
-            </ul>
-        </nav>
+                </ul>
+            </nav>
+        </div>
     </header>
     ';
 }
