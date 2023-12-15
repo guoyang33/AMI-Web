@@ -92,6 +92,7 @@ echo '
             </div>
         </header><!-- /.page-header -->
 ';
+/* ===========================================About=========================================== */
 echo '
         <section id="about">
             <h1>' . $content['about']['title'] . '</h1>
@@ -120,8 +121,44 @@ foreach ($content['about']['articles'] as $article) {
 }
 echo '
         </section><!-- /#about -->
+';
+/* ===========================================Products=========================================== */
+echo '
         <section id="products">
             <h1>' . $content['products']['title'] . '</h1>
+';
+foreach ($content['products']['products'] as $product) {
+    echo '
+            <article class="' . $product['style_class'] . '">
+                <h2>' . $product['title'] . '</h2>
+    ';
+    if ($product['content']['type'] == 'list') {
+        foreach ($product['content']['list'] as $list_item) {
+            echo $list_item;
+        }
+    }
+    if ($product['type'] == 'pro_or_pub') {
+        echo '
+                <div class="row">
+                    <div class="col-6">
+                        <button type="button" id="'. $product['content']['pro_btn']['id'] . '" class="btn btn-primary">
+                            ' . $product['content']['pro_btn']['text'] . '
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" id="'. $product['content']['pub_btn']['id'] . '" class="btn btn-info">
+                            ' . $product['content']['pub_btn']['text'] . '
+                        </button>
+                    </div>
+                </div>
+        ';
+    }
+    echo '
+            </article>
+    ';
+}
+echo '
+        </section><!-- /#products -->
 ';
 
 echo '
@@ -133,6 +170,7 @@ echo '
             </div><!-- /.home-content -->
         </div><!-- /#home -->
         <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/dist/js/main.js"></script>
     </body>
 </html>
 ';
