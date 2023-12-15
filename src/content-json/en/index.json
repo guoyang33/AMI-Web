@@ -74,6 +74,32 @@
     },
     "products": {
         "title": "Products",
-        "articles": ""
+        "products": [
+            {
+                "type": "pro_or_pub",
+                "title": "",
+                "style_class": "style-prod-1",
+                "content": {
+                    "type": "list",
+                    "list": [
+                        "<p class='style-b48'>Dedicated to developing and delivering hormone therapeutics</p>",
+                        "<p class='style-b24'>A global pharmaceutical company partners focused on chronic endocrine conditions</p>",
+                        "<ul class='style-dash-list'>",
+                        "   <li class='style-b18'>DIURNAL, a global specialty pharmaceutical company focused on chronic endocrine diseases</li>",
+                        "   <li class='style-b18'>CITRINE Medicine, a pharmaceutical company and focused on providing effective and affordable therapeutic solutions to rare disease patients in the Greater China, holds the exclusive distribution rights for DIURNAL's products across Asia</li>",
+                        "   <li class='style-b18'>AMI, a pharmaceutical distribution firm dedicated to delivering effective and accessible therapeutic solutions to rare disease patients in Taiwan, possesses the distribution rights for DIURNAL's products via its partnership with CITRINE Medicine</li>",
+                        "</ul>"
+                    ],
+                    "pro_btn": {
+                        "id": "prod1ProBtn",
+                        "text": "Healthcare Professionals",
+                        "data_target": "prod1ProConfirmModal"
+                    },
+                    "pub_btn": {
+                        "text": "Patients /Public"
+                    }
+                }
+            }
+        ]
     }
 }
