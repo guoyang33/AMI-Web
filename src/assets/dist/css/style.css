@@ -14,173 +14,36 @@ body {
 a {
     text-decoration: none;;
 }
-img {
-    max-width: 100%;
-}
-/* 報導部分 */
-article {
-    width: 74%;
-}
-/* 邊欄 */
-aside {
-    width: 22%;
-}
-/* 章節 */
-/* section {
-    width: 74%;
-    margin: auto;
-    margin-top: 2%;
-    border-bottom: 1px #62B1D0 solid;
-}
-section p {
-    margin-bottom: 1rem;
+
+/* Products
+----------------------------------------------- */
+/* .style-prod-1 {
+    background-image: url(../../products/prod-1-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
 } */
 
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-    [data-aos-delay] {
-      transition-delay: 0 !important;
-    }
-}  
-
-/* HEADER
------------------------------------------------ */
-
-/* HOME
------------------------------------------------ */
-#home {
-    /* background-image: url(../../img/home.png); */
-    background-color: #FCFFFB;
-    min-height: 100vh;
+/* 48號粗體字 */
+.style-b48 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
 }
-#home .page-title {
-    text-transform: none;
+/* 24號粗體字 */
+.style-b24 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.2;
 }
-.home-content {
-    text-align: center;
-    margin-top: 10%;
-}
-.home-content p {
+/* 18號粗體字 */
+.style-b18 {
     font-size: 1.125rem;
-    margin: 10px 0 42px;
+    font-weight: bold;
+    line-height: 1.2;
 }
-
-/* 標題 */
-.page-title {
-    font-size: 5rem;
-    font-family: 'Philosopher', serif;
-    text-transform: uppercase;
-    font-weight: normal;
-}
-
-/* 按鈕 */
-.button {
-    font-size: 1.375rem;
-    background: #69C7E1;
-    color: #FCFFFB;
-    border-radius: 5px;
-    padding: 18px 32px;
-}
-.button:hover {
-    color: #FCFFFB;
-    background: #62B1D0;
-}
-
-/* 大型背景影像 */
-.big-bg {
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat
-}
-
-.text-short {
-    display: none;
-}
-
-/* ABOUT
------------------------------------------------ */
-#about {
-    /* background-image: url(../../img/about.png); */
-    height: 270px;
-    margin-bottom: 40px;
-}
-#about .page-title {
-    text-align: center;
-}
-.about-contents {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-.about-info {
-    position: relative;
-    padding-top: 4px;
-    margin-bottom: 40px;
-}
-.about-title {
-    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-    font-size: 2rem;
-    font-weight: normal;
-}
-.sub-menu {
-    margin-bottom: 60px;
-    list-style: none;
-}
-.sub-menu li {
-    border-bottom: 1px #06263D solid;
-}
-.sub-menu a {
-    color: #06263D;
-    padding: 10px;
-    display: block;     /* 讓連結的範圍擴大為整個項目 */
-}
-.sub-menu a:hover {
-    color: #69C8DF;
-}
-
-/* 頁尾
------------------------------------------------ */
-footer{
-    background: #06263D;
-    text-align: center;
-    padding: 26px 0;
-}
-footer p {
-    color: #FCFFFB;
-    font-size: 0.875rem;
-}
-
-/* 手機版
------------------------------------------------ */
-@media (max-width: 600px) {
-    .logo {
-        width: 64px;
-    }
-    .page-title {
-        font-size: 2.5rem;
-    }
-    /* HEADER */
-    .main-nav {
-        font-size: 1rem;
-        margin-top: 10px;
-    }
-    .main-nav li {
-        margin: 0 10px;
-    }
-    /* HOME */
-    .home-content {
-        margin-top: 20%;
-    }
-    .page-header {
-        flex-direction: column;
-        align-items: center;
-    }
-    .text-full {
-        display: none;
-    }
-    .text-short {
-        display: block;
-    }
+/* dash list */
+ul.style-dash-list {
+    list-style-type: '- ';
 }
