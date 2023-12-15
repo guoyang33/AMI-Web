@@ -92,11 +92,13 @@
                     ],
                     "pro_btn": {
                         "id": "prod1ProBtn",
-                        "text": "Healthcare Professionals",
-                        "data_target": "prod1ProConfirmModal"
+                        "style_class": "style-pro-confirm-btn",
+                        "text": "Healthcare<br>Professionals"
                     },
                     "pub_btn": {
-                        "text": "Patients /Public"
+                        "id": "prod1PubBtn",
+                        "style_class": "style-pub-confirm-btn",
+                        "text": "Patients /<br>Public"
                     }
                 }
             }

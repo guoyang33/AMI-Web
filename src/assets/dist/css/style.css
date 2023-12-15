@@ -17,13 +17,15 @@ a {
 
 /* Products
 ----------------------------------------------- */
-/* .style-prod-1 {
-    background-image: url(../../products/prod-1-bg.png);
-    background-size: cover;
+.style-prod-1 {
+    background-image: url(../../products/prod_1_bg.png);
+    /* background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #fff;
-} */
+    color: #F2F2F2;
+    height: 90vh;
+    width: 95vw; */
+}
 
 /* 48號粗體字 */
 .style-b48 {
@@ -46,4 +48,18 @@ a {
 /* dash list */
 ul.style-dash-list {
     list-style-type: '- ';
+}
+/* 按鈕 醫療or一般民眾 */
+.style-pro-or-pub-btn {
+    font-weight: bold;
+}
+/* 按鈕 醫療專業人員 */
+.style-pro-btn {
+    background-color: #FC5F95;
+    color: #fff;
+}
+/* 按鈕 一般民眾 */
+.style-pub-btn {
+    background-color: #25C6E3;
+    color: #f00;
 }

@@ -31,7 +31,23 @@ echo '
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="' . $info['description'] . '" />
         <title>' . $info['title'] . '</title>
-        <link rel="icon" href="' . $info['icon'] . '" type="image/x-icon" />
+        <link rel="apple-touch-icon" sizes="57x57" href="./assets/icon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./assets/icon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./assets/icon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/icon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./assets/icon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./assets/icon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./assets/icon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./assets/icon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/icon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="./assets/icon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="./assets/icon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/icon/favicon-16x16.png">
+        <link rel="manifest" href="./assets/icon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
 
         <!-- 重置網頁CSS設定 -->
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
@@ -141,12 +157,12 @@ foreach ($content['products']['products'] as $product) {
         echo '
                 <div class="row">
                     <div class="col-6">
-                        <button type="button" id="'. $product['content']['pro_btn']['id'] . '" class="btn btn-primary">
+                        <button type="button" id="'. $product['content']['pro_btn']['id'] . '" class="btn style-pro-or-pub-btn style-pro-btn">
                             ' . $product['content']['pro_btn']['text'] . '
                         </button>
                     </div>
                     <div class="col-6">
-                        <button type="button" id="'. $product['content']['pub_btn']['id'] . '" class="btn btn-info">
+                        <button type="button" id="'. $product['content']['pub_btn']['id'] . '" class="btn style-pro-or-pub-btn style-pub-btn">
                             ' . $product['content']['pub_btn']['text'] . '
                         </button>
                     </div>
