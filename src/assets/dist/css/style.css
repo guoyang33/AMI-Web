@@ -49,17 +49,17 @@ a {
 ul.style-dash-list {
     list-style-type: '- ';
 }
-/* 按鈕 醫療or一般民眾 */
-.style-pro-or-pub-btn {
+/* 按鈕 專業人員 or 一般民眾 */
+/* .style-pro-or-pub-btn {
     font-weight: bold;
-}
+} */
 /* 按鈕 醫療專業人員 */
-.style-pro-btn {
+/* .style-pro-btn {
     background-color: #FC5F95;
     color: #fff;
-}
+} */
 /* 按鈕 一般民眾 */
-.style-pub-btn {
+/* .style-pub-btn {
     background-color: #25C6E3;
     color: #f00;
-}
+} */

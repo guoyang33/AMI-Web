@@ -93,12 +93,38 @@
                     "pro_btn": {
                         "id": "prod1ProBtn",
                         "style_class": "style-pro-confirm-btn",
-                        "text": "Healthcare<br>Professionals"
+                        "text": "Healthcare<br>Professionals",
+                        "type": "confirm_window",
+                        "window_id": "prod1ProConfirmWindow",
+                        "window_type": "list",
+                        "window_text": [
+                            "<p>This site is intended for healthcare professionals and patients, and its content involves medical expertise.</p>",
+                            "<p>By clicking \"Continue,\" you acknowledge this disclaimer and confirm that you are either a healthcare professional or a patient.</p>"
+                        ],
+                        "confirm_window": {
+                            "type": "list",
+                            "confirm_btn": {
+                                "id": "prod1ProConfirmBtn",
+                                "style_class": "style-pro-confirm-btn",
+                                "text": "繼續",
+                                "type": "link",
+                                "link": "https://www.diurnal.com/NonUkResidents/HCP/home"
+                            },
+                            "cancel_btn": {
+                                "id": "prod1ProCancelBtn",
+                                "style_class": "style-pro-cancel-btn",
+                                "text": "Close",
+                                "type": "link",
+                                "link": "https://www.diurnal.com/NonUkResidents/Non-HCP/home"
+                            }
+                        }
                     },
                     "pub_btn": {
                         "id": "prod1PubBtn",
                         "style_class": "style-pub-confirm-btn",
-                        "text": "Patients /<br>Public"
+                        "text": "Patients /<br>Public",
+                        "type": "link",
+                        "link": "https://www.diurnal.com/NonUkResidents/Non-HCP/home"
                     }
                 }
             }

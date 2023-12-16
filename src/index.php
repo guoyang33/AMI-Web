@@ -157,16 +157,22 @@ foreach ($content['products']['products'] as $product) {
         echo '
                 <div class="row">
                     <div class="col-6">
-                        <button type="button" id="'. $product['content']['pro_btn']['id'] . '" class="btn style-pro-or-pub-btn style-pro-btn">
+                        <button type="button" id="'. $product['content']['pro_btn']['id'] . '" class="btn btn-primary style-pro-or-pub-btn style-pro-btn">
                             ' . $product['content']['pro_btn']['text'] . '
                         </button>
                     </div>
                     <div class="col-6">
-                        <button type="button" id="'. $product['content']['pub_btn']['id'] . '" class="btn style-pro-or-pub-btn style-pub-btn">
+                        <button type="button" id="'. $product['content']['pub_btn']['id'] . '" class="btn btn-primary style-pro-or-pub-btn style-pub-btn">
                             ' . $product['content']['pub_btn']['text'] . '
                         </button>
                     </div>
                 </div>
+                <div id="confirm_window" class="confirm-window">
+                    <div class="confirm_window_content">
+                        <span class="close">&times;</span>
+                        <p>確定要切換嗎？</p>
+                        <button type="button" id="confirm_btn" class="btn btn-primary">確定</button>
+                    </div>
         ';
     }
     echo '
