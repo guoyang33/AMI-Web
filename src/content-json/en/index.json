@@ -43,11 +43,11 @@
                 "list": [
                     "<p>We acknowledge that ensuring customer satisfaction is fundamental to our ongoing prosperity. We consistently uphold exceptional customer satisfaction by:</p>",
                     "<ul>",
-                    "<li>Gaining deep insights into our industry's dynamics, understanding our customers' core priorities, and staying attuned to relevant developments that affect our operations. We make it our mission to comprehend the ramifications of our actions on our customers.</li>",
-                    "<li>Pursuing absolute precision and transparency in every facet of customer-related activities, encompassing orders, communications, and deliveries.</li>",
-                    "<li>Cultivating enduring and trustworthy partnerships with our customers, rooted in integrity and confidence.</li>",
-                    "<li>Actively soliciting and incorporating customer input into our processes.</li>",
-                    "<li>Demonstrating responsiveness to customer inquiries and feedback.</li>",
+                    "   <li>Gaining deep insights into our industry's dynamics, understanding our customers' core priorities, and staying attuned to relevant developments that affect our operations. We make it our mission to comprehend the ramifications of our actions on our customers.</li>",
+                    "   <li>Pursuing absolute precision and transparency in every facet of customer-related activities, encompassing orders, communications, and deliveries.</li>",
+                    "   <li>Cultivating enduring and trustworthy partnerships with our customers, rooted in integrity and confidence.</li>",
+                    "   <li>Actively soliciting and incorporating customer input into our processes.</li>",
+                    "   <li>Demonstrating responsiveness to customer inquiries and feedback.</li>",
                     "</ul>"
                 ]
             },
@@ -57,10 +57,10 @@
                 "list": [
                     "<p>Our partner manufacturing and distribution companies play a pivotal role in our business strategy, and we prioritize their well-being by:</p>",
                     "<ul>",
-                    "<li>Cultivating strong relationships with our partners, fostering an environment where they take pride in collaborating with us.</li>",
-                    "<li>Maintaining unwavering transparency in our communications and actively soliciting partner feedback to enhance our service to them continually.</li>",
-                    "<li>Recognizing the substantial and invaluable contributions our partners make to our business and overall success.</li>",
-                    "<li>Proposing innovative approaches to conducting business that mutually benefit our partners.</li>",
+                    "   <li>Cultivating strong relationships with our partners, fostering an environment where they take pride in collaborating with us.</li>",
+                    "   <li>Maintaining unwavering transparency in our communications and actively soliciting partner feedback to enhance our service to them continually.</li>",
+                    "   <li>Recognizing the substantial and invaluable contributions our partners make to our business and overall success.</li>",
+                    "   <li>Proposing innovative approaches to conducting business that mutually benefit our partners.</li>",
                     "</ul>"
                 ]
             },
@@ -76,56 +76,56 @@
         "title": "Products",
         "products": [
             {
-                "type": "pro_or_pub",
                 "title": "",
+                "type": [
+                    "list",
+                    "pro_or_pub"
+                ],
+                "list": [
+                    "<p class='style-b48'>Dedicated to developing and delivering hormone therapeutics</p>",
+                    "<p class='style-b24'>A global pharmaceutical company partners focused on chronic endocrine conditions</p>",
+                    "<ul class='style-dash-list'>",
+                    "   <li class='style-b18'>DIURNAL, a global specialty pharmaceutical company focused on chronic endocrine diseases</li>",
+                    "   <li class='style-b18'>CITRINE Medicine, a pharmaceutical company and focused on providing effective and affordable therapeutic solutions to rare disease patients in the Greater China, holds the exclusive distribution rights for DIURNAL's products across Asia</li>",
+                    "   <li class='style-b18'>AMI, a pharmaceutical distribution firm dedicated to delivering effective and accessible therapeutic solutions to rare disease patients in Taiwan, possesses the distribution rights for DIURNAL's products via its partnership with CITRINE Medicine</li>",
+                    "</ul>"
+                ],
                 "style_class": "style-prod-1",
-                "content": {
-                    "type": "list",
-                    "list": [
-                        "<p class='style-b48'>Dedicated to developing and delivering hormone therapeutics</p>",
-                        "<p class='style-b24'>A global pharmaceutical company partners focused on chronic endocrine conditions</p>",
-                        "<ul class='style-dash-list'>",
-                        "   <li class='style-b18'>DIURNAL, a global specialty pharmaceutical company focused on chronic endocrine diseases</li>",
-                        "   <li class='style-b18'>CITRINE Medicine, a pharmaceutical company and focused on providing effective and affordable therapeutic solutions to rare disease patients in the Greater China, holds the exclusive distribution rights for DIURNAL's products across Asia</li>",
-                        "   <li class='style-b18'>AMI, a pharmaceutical distribution firm dedicated to delivering effective and accessible therapeutic solutions to rare disease patients in Taiwan, possesses the distribution rights for DIURNAL's products via its partnership with CITRINE Medicine</li>",
-                        "</ul>"
+                "pro_btn": {
+                    "id": "prod1ProBtn",
+                    "style_class": "style-pro-btn",
+                    "text": "Healthcare<br>Professionals",
+                    "type": "confirm_window",
+                    "window_id": "prod1ProConfirmWindow",
+                    "window_type": "list",
+                    "window_text": [
+                        "<p>This site is intended for healthcare professionals and patients, and its content involves medical expertise.</p>",
+                        "<p>By clicking \"Continue,\" you acknowledge this disclaimer and confirm that you are either a healthcare professional or a patient.</p>"
                     ],
-                    "pro_btn": {
-                        "id": "prod1ProBtn",
-                        "style_class": "style-pro-confirm-btn",
-                        "text": "Healthcare<br>Professionals",
-                        "type": "confirm_window",
-                        "window_id": "prod1ProConfirmWindow",
-                        "window_type": "list",
-                        "window_text": [
-                            "<p>This site is intended for healthcare professionals and patients, and its content involves medical expertise.</p>",
-                            "<p>By clicking \"Continue,\" you acknowledge this disclaimer and confirm that you are either a healthcare professional or a patient.</p>"
-                        ],
-                        "confirm_window": {
-                            "type": "list",
-                            "confirm_btn": {
-                                "id": "prod1ProConfirmBtn",
-                                "style_class": "style-pro-confirm-btn",
-                                "text": "繼續",
-                                "type": "link",
-                                "link": "https://www.diurnal.com/NonUkResidents/HCP/home"
-                            },
-                            "cancel_btn": {
-                                "id": "prod1ProCancelBtn",
-                                "style_class": "style-pro-cancel-btn",
-                                "text": "Close",
-                                "type": "link",
-                                "link": "https://www.diurnal.com/NonUkResidents/Non-HCP/home"
-                            }
+                    "confirm_window": {
+                        "type": "list",
+                        "confirm_btn": {
+                            "id": "prod1ProConfirmBtn",
+                            "style_class": "style-pro-confirm-btn",
+                            "text": "繼續",
+                            "type": "link",
+                            "link": "https://www.diurnal.com/NonUkResidents/HCP/home"
+                        },
+                        "cancel_btn": {
+                            "id": "prod1ProCancelBtn",
+                            "style_class": "style-pro-cancel-btn",
+                            "text": "Close",
+                            "type": "link",
+                            "link": "https://www.diurnal.com/NonUkResidents/Non-HCP/home"
                         }
-                    },
-                    "pub_btn": {
-                        "id": "prod1PubBtn",
-                        "style_class": "style-pub-confirm-btn",
-                        "text": "Patients /<br>Public",
-                        "type": "link",
-                        "link": "https://www.diurnal.com/NonUkResidents/Non-HCP/home"
                     }
+                },
+                "pub_btn": {
+                    "id": "prod1PubBtn",
+                    "style_class": "style-pub-btn",
+                    "text": "Patients /<br>Public",
+                    "type": "link",
+                    "link": "https://www.diurnal.com/NonUkResidents/Non-HCP/home"
                 }
             }
         ]
