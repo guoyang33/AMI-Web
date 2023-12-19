@@ -65,40 +65,40 @@ echo '
     <body>
         <header id="header" class="header fixed-top d-none">
             <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-            <a href="index.php" class="logo d-flex align-items-center">
-                <img class="logo" src="' . $info['logo'] . '" alt="' . $info['logo_alt'] . '">
-            </a>
-            <nav class="navbar">
-                <ul>
-                    <li><a class="nav-link scrollto active" href="#home">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#products">Products</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                    <li><a class="nav-link scrollto" href="#news">news</a></li>
-                </ul>
-                <i class="bi mobile-nav-toggle bi-list"></i>
-            </nav><!-- .navbar -->
-
-
-            <div class="header-function-bar d-none">
-                <div class="dropdown dropdown-language-switch">
-                    語言：
-                    <button class="btn dropdown-toggle border" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="dropdown-text">Language</span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="?lang=zh_TW">繁體中文</a></li>
-                        <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                <a href="index.php" class="logo d-flex align-items-center">
+                    <img class="logo" src="' . $info['logo'] . '" alt="' . $info['logo_alt'] . '">
+                </a>
+                <nav class="navbar">
+                    <ul>
+                        <li><a class="nav-link scrollto active" href="#home">Home</a></li>
+                        <li><a class="nav-link scrollto" href="#about">About</a></li>
+                        <li><a class="nav-link scrollto" href="#products">Products</a></li>
+                        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                        <li><a class="nav-link scrollto" href="#news">news</a></li>
                     </ul>
-                </div>
-                <nav>
-                    <ul class="main-nav">
+                    <i class="bi mobile-nav-toggle bi-list"></i>
+                </nav><!-- .navbar -->
+
+
+                <div class="header-function-bar d-none">
+                    <div class="dropdown dropdown-language-switch">
+                        語言：
+                        <button class="btn dropdown-toggle border" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="dropdown-text">Language</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="?lang=zh_TW">繁體中文</a></li>
+                            <li><a class="dropdown-item" href="?lang=en">English</a></li>
+                        </ul>
+                    </div>
+                    <nav>
+                        <ul class="main-nav">
 ';
 foreach ($info['header']['nav'] as $nav_item) {
 echo '
-                        <li>
-                            <a href="' . $nav_item['link'] . '">' . $nav_item['text'] . '</a>
-                        </li>
+                            <li>
+                                <a href="' . $nav_item['link'] . '">' . $nav_item['text'] . '</a>
+                            </li>
 ';
 }
 echo '
@@ -148,33 +148,39 @@ foreach ($content['products']['products'] as $product) {
             <article class="' . $product['style_class'] . '">
                 <h2>' . $product['title'] . '</h2>
     ';
-    if ($product['content']['type'] == 'list') {
-        foreach ($product['content']['list'] as $list_item) {
-            echo $list_item;
+    if (in_array('list', $product['type'])) {       // 條列式內容
+        foreach ($product['list'] as $list_item) {
+            echo $list_item, "\n";
         }
     }
-    if ($product['type'] == 'pro_or_pub') {
+    if (in_array('pro_or_pub', $product['type'])) {     // 身份選項 僅有兩個按鈕
         echo '
                 <div class="row">
-                    <div class="col-6">
-                        <button type="button" id="'. $product['content']['pro_btn']['id'] . '" class="btn btn-primary style-pro-or-pub-btn style-pro-btn">
-                            ' . $product['content']['pro_btn']['text'] . '
-                        </button>
-                    </div>
-                    <div class="col-6">
-                        <button type="button" id="'. $product['content']['pub_btn']['id'] . '" class="btn btn-primary style-pro-or-pub-btn style-pub-btn">
-                            ' . $product['content']['pub_btn']['text'] . '
-                        </button>
-                    </div>
+        ';
+        echo '
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#prod-1-pro-confirm-modal">產品</button>
                 </div>
-                <div id="confirm_window" class="confirm-window">
-                    <div class="confirm_window_content">
-                        <span class="close">&times;</span>
-                        <p>確定要切換嗎？</p>
-                        <button type="button" id="confirm_btn" class="btn btn-primary">確定</button>
-                    </div>
         ';
     }
+    echo '
+                <div class="modal fade" id="prod-1-pro-confirm-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modal-title"產品</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div><!-- /.modal-header -->
+                            <div class="modal-body">
+                                <p>你確定要選擇產品嗎？</p>
+                            </div><!-- /.modal-body -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-primary">確定</button>
+                            </div><!-- /.modal-footer -->
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+    ';
     echo '
             </article>
     ';
