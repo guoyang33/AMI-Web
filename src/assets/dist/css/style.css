@@ -24,23 +24,11 @@ div.container {
 
 /* HEADER
 ----------------------------------------------- */
-/* div.header */
-div.header {
+header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
 }
-/* div.header > div.logo */
-div.header > div.logo {
-    display: flex;
-    align-items: center;
-}
-/* div.header > div.logo > img */
-div.header > div.logo > img {
-    width: clamp(3rem, 5vw, 5rem);
-    margin-right: 0.5rem;
-}
+
 
 /* div.main */
 
