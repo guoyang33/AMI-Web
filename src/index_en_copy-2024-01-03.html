@@ -43,15 +43,11 @@
     </head>
 
     <body>
-        <!-- header -->
-        <header id="header">
-            <div class="header-logo">
-                <a href="index_en.html">
-                    <img class="logo-img" src="assets/awe_logo.png" alt="Awesome Medical Inc.">
-                    <!-- <p>高展醫療用品事業有限公司</p>
-                    <p>Awesome Medical Inc.</p> -->
+        <header>
+            <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+                <a href="index.php" class="logo d-flex align-items-center">
+                    <img class="logo" src="assets/brand/android-chrome-192x192.png" alt="Awesome Medical Inc.">
                 </a>
-<<<<<<< HEAD
                 <nav class="navbar">
                     <ul>
                         <li><a class="nav-link scrollto active" href="#home">Home</a></li>
@@ -312,29 +308,14 @@
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-=======
-            </div>
-            <div class="header-nav">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="about_en.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="product_en.html">Product</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="medicine_updates_en.html" class="nav-link"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact_en.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        
-                    </li>
-                </ul>
-            </div>
-        </header>
->>>>>>> 2bcadf1bf1ba1bf45b26068824370cd8b7adf7b8
+
+        <div id="home" class="big-bg d-none">
+            <div class="home-content wrapper">
+                <h2 class="page-title">' . $content['title'] . '</h2>
+                <p>' . $content['text'] . '</p>
+                <a class="button" href="' . $content['button']['link'] . '">' . $content['button']['text'] . '</a>
+            </div><!-- /.home-content -->
+        </div><!-- /#home -->
 
         <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
         <script src="assets/dist/js/main.js"></script>
