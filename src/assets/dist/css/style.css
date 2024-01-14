@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* 共通部分
+/* COMMON
 ----------------------------------------------- */
 html {
     font-size: 100%;
@@ -15,69 +15,35 @@ a {
     text-decoration: none;;
 }
 
-/* div.container */
-div.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
 /* HEADER
 ----------------------------------------------- */
 header {
+    background: #FFF;
+    color: #06263D;
+    padding: 1rem;
+    text-align: center;
     display: flex;
     justify-content: space-between;
 }
+div.header-logo {
+    display: flex;
+}
+div.header-logo img {
+    width: clamp(5rem, 15vw, 15rem);
+}
+div.header-nav {
+    display: flex;
+    align-items: end;
+    margin-bottom: 1rem;
+}
+div.header-lang {
+    display: flex;
+}
 
-
-/* div.main */
-
-/* Products
+/* MOBILE MODE
 ----------------------------------------------- */
-/* 產品1 */
-.style-prod-1 {
-    background-image: url(../../products/prod_1_bg.png);
-    /* background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #F2F2F2;
-    height: 90vh;
-    width: 95vw; */
+@media (max-width: 767px) {
+    div.header-nav {
+        display: none;
+    }
 }
-
-/* 48號粗體字 */
-.style-b48 {
-    font-size: 3rem;
-    font-weight: bold;
-    line-height: 1.2;
-}
-/* 24號粗體字 */
-.style-b24 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 1.2;
-}
-/* 18號粗體字 */
-.style-b18 {
-    font-size: 1.125rem;
-    font-weight: bold;
-    line-height: 1.2;
-}
-/* dash list */
-ul.style-dash-list {
-    list-style-type: '- ';
-}
-/* 按鈕 專業人員 or 一般民眾 */
-/* .style-pro-or-pub-btn {
-    font-weight: bold;
-} */
-/* 按鈕 醫療專業人員 */
-/* .style-pro-btn {
-    background-color: #FC5F95;
-    color: #fff;
-} */
-/* 按鈕 一般民眾 */
-/* .style-pub-btn {
-    background-color: #25C6E3;
-    color: #f00;
-} */
