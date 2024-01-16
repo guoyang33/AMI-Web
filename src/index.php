@@ -36,7 +36,6 @@
     </head>
 
     <body>
-        <!-- header -->
         <header>
             <div class="header-logo">
                 <a href="index.php">
@@ -70,6 +69,32 @@
                 <a href="?lang=zh_TW">切換至中文</a>
             </div>
         </header>
+
+        <main>
+            <section id="about">
+                <h1>About AMI</h1>
+                <p>AWESOME Medical Inc., a brand-new medical in-vitro device (IVD) and medicine import/export distribution company founded in Kaohsiung city, Taiwan, in June 2021.</p>
+                <p>At Awesome Medical Inc., our unwavering commitment revolves around delivering pharmaceuticals and medical devices that exemplify the highest standards of quality, safety, and effectiveness. We also take pride in extending exceptional services to our valued customers and partners across the globe.</p>
+                <p>Our overarching vision is to stand as a premier distributor in the pharmaceutical and medical device sectors, renowned for our steadfast dedication to providing consistently superior customer service. We aim to uphold the principles of integrity and transparency in all our business endeavors.</p>
+                <button class="btn btn-primary">More</button>
+            </section><!-- #about -->
+            <section id="products">
+            </section><!-- #products -->
+            <section id="news">
+            </section><!-- #news -->
+            <section id="contact">
+            </section><!-- #contact -->
+            <section id="links">
+            </section><!-- #links -->
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Awesome Medical Inc.</p>
+            <p>Tel: +886-7-312-0079</p>
+            <p>Fax: +886-7-312-0079</p>
+            <!-- <p>Address: 1F, No. 36, Lane 246, Tone-Meng 3rd Rd., San-Min District 80746, Kaohsiung City, Taiwan, Republic of China</p> -->
+            <p>Address: 1F., No. 36, Ln. 246, Tongmeng 3rd Rd., Sanmin Dist., Kaohsiung City 80746, Taiwan (R.O.C.)</p>
+        </footer>
 
         <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
         <script src="assets/dist/js/main.js"></script>
