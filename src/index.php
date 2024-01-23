@@ -3,9 +3,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="Content-Type" content="text/html; charset=utf-8">
+        <meta name="author" content="CYouLiao">
+        <meta name="description" content="AWESOME Medical Inc. (abbr. as AMI), a medical in-vitro device (IVD) and medicine import/ distribution company based in Kaohsiung city, Taiwan.">
+        <meta name="keywords" content="AWESOME Medical Inc., AMI, medical">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="AWESOME Medical Inc. (abbr. as AMI), a medical in-vitro device (IVD) and medicine import/ distribution company based in Kaohsiung city, Taiwan." />
         <title>Awesome Medical</title>
         <link rel="apple-touch-icon" sizes="57x57" href="./assets/icon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="./assets/icon/apple-icon-60x60.png">
@@ -71,12 +72,9 @@
         </header>
 
         <main>
-            <section id="about">
-                <h1>About AMI</h1>
-                <p>AWESOME Medical Inc., a brand-new medical in-vitro device (IVD) and medicine import/export distribution company founded in Kaohsiung city, Taiwan, in June 2021.</p>
-                <p>At Awesome Medical Inc., our unwavering commitment revolves around delivering pharmaceuticals and medical devices that exemplify the highest standards of quality, safety, and effectiveness. We also take pride in extending exceptional services to our valued customers and partners across the globe.</p>
-                <p>Our overarching vision is to stand as a premier distributor in the pharmaceutical and medical device sectors, renowned for our steadfast dedication to providing consistently superior customer service. We aim to uphold the principles of integrity and transparency in all our business endeavors.</p>
-                <button class="btn btn-primary">More</button>
+            <section id="about" class="col-10 offset-1">
+                <h1>高展醫療用品：追求卓越，超越期許，與您共創健康未來。</h1>
+                <button class="btn btn-primary">About AMI</button>
             </section><!-- #about -->
             <section id="products">
             </section><!-- #products -->

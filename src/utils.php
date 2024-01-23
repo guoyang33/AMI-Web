@@ -13,7 +13,7 @@ function get_lang_dict() {
         'zh_TW' => array(
             'name' => '繁體中文',
             'code' => 'zh_TW',
-            'html_lang' => 'zh-Hant-TW'
+            'html_lang' => 'zh-tw'
         ),
         'en' => array(
             'name' => 'English',
