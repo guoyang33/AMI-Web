@@ -20,33 +20,64 @@ a {
 header {
     background: #ffffff;
     color: #06263D;
-    padding: 1rem;
+    /* padding: 1rem; */
     text-align: center;
     display: flex;
     justify-content: space-between;
+    height: 20vh;
 }
 div.header-logo {
     display: flex;
+    cursor: pointer;
+    width: clamp(5rem, 15vw, 10rem);
+    background-image: url('../../awe_logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 div.header-logo img {
-    width: clamp(5rem, 15vw, 15rem);
+    margin: 1rem;
+    height: clamp(5rem, 15vw, 10rem);
+    bottom: 0;
 }
 div.header-nav {
+    margin: 1rem;
     display: flex;
     align-items: end;
     margin-bottom: 1rem;
 }
 div.header-lang {
+    margin: 1rem;
     display: flex;
 }
 
 /* MAIN
 ----------------------------------------------- */
-main {
-    padding: 1rem;
-}
 section {
-    margin-bottom: 1rem;
+    margin: 1rem 2rem;
+    height: 70vh;
+    vertical-align: middle;
+}
+section > h1 h2 p button {
+    margin: auto;
+    text-align: center;
+}
+
+article {
+    margin: 2rem 4rem 6rem 4rem;
+}
+article > hr {
+    margin: 0 2rem 2rem 0;
+}
+article > h1 {
+    margin: 1rem 0;
+}
+article > h2 {
+    margin: 1rem 0;
+    text-align: center;
+}
+article>p {
+    margin: 2rem 0;
 }
 
 /* FOOTER
@@ -56,6 +87,7 @@ footer {
     color: #FFF;
     padding: 1rem;
     text-align: center;
+    bottom: 0;
 }
 footer p {
     margin: 0;

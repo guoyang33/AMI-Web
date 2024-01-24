@@ -1,51 +1,39 @@
 <?php
-/* 
- * about.php
- * 關於頁面
- */
 
-require_once 'html_head.php';
-require_once 'utils.php';
+include 'html_head.php';
+$content_path = 'content-json/' . $lang . '/about.json';
+$content = json_decode(file_get_contents($content_path), true);
 
-$section_html = '';
+echo '
+    <body>
+';
+html_body_header();
+echo '
+        <article>
+            <h1>' . $content['title'] . '</h1>
+';
 foreach ($content['sections'] as $section) {
-    // 文章 HTML
-    $section_html .= '
-    <section>
-        <header class="about-info">
-            <h2 class="about-title">' . $section['title'] . '</h2>
-        </header>
+    echo '
+            <hr>
+            <h2>' . $section['title'] . '</h2>
     ';
-    if ($section['type'] == 'list') {
-        $section_html .= implode("\n", $section['list']);
-    } else {
-        $section_html .= '<p>' . $section['text'] . '</p>';
+    switch ($section['type']) {
+        case 'list':
+            foreach ($section['list'] as $item) {
+                echo $item, "\n";
+            }
+            break;
+        default:
+            echo '
+            <p>' . $section['text'] . '</p>
+            ';
     }
-    $section_html .= '
-    </section>
-    ';
 }
-
 echo '
-<body>
-    <div id="about" class="big-bg">
+        </article>
 ';
-html_body_header($info);
+html_body_footer();
 echo '
-        <div class="wrapper">
-            <h2 class="page-title">' . $content['title'] . '</h2>
-        </div><!-- /.wrapper -->
-';
-// echo '
-//     <div class="about-contents wrapper">
-// ';
-echo $section_html;
-// echo '
-//     </div><!-- /.about-contents -->
-// ';
-html_body_footer($info);
-echo '
-    </div><!-- /#about -->
-</body>
+</html>
 ';
 ?>

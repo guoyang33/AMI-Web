@@ -65,44 +65,46 @@ function show_lang_switch() {
     ';
 }
 // 顯示網頁header
-function html_body_header($info) {
+function html_body_header() {
     echo '
-    <header class="page-header wrapper">
-        <h1>
-            <a href="index.php">
-                <img class="logo" src="' . $info['logo'] . '" alt="' . $info['logo_alt'] . '">
-            </a>
-        </h1>
-        <div>
-    ';
-    show_lang_switch();
-    echo '
-            <nav>
-                <ul class="main-nav">
-    ';
-    foreach ($info['header']['nav'] as $nav_item) {
-        echo '
-                    <li>
-                        <a href="' . $nav_item['link'] . '">' . $nav_item['text'] . '</a>
+    <header>
+        <div class="header-logo" onclick="location.href=\'index.php\'"></div>
+        <div class="header-nav">
+            <nav class="navbar navbar-expand">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
                     </li>
-        ';
-    }
-    echo '
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#links">Links</a>
+                    </li>
                 </ul>
             </nav>
+        </div>
+        <div class="header-lang">
+            <a href="?lang=zh_TW">切換至中文</a>
         </div>
     </header>
     ';
 }
 // 顯示網頁footer
-function html_body_footer($info) {
+function html_body_footer() {
     echo '
     <footer>
-        <div class="wrapper">
-            <p>
-                <small>&copy; 2023 CYouLiao</small>
-            </p>
-        </div>
+        <p>&copy; 2023 Awesome Medical Inc.</p>
+        <p>Tel: +886-7-312-0079</p>
+        <p>Fax: +886-7-312-0079</p>
+        <!-- <p>Address: 1F, No. 36, Lane 246, Tone-Meng 3rd Rd., San-Min District 80746, Kaohsiung City, Taiwan, Republic of China</p> -->
+        <p>Address: 1F., No. 36, Ln. 246, Tongmeng 3rd Rd., Sanmin Dist., Kaohsiung City 80746, Taiwan (R.O.C.)</p>
     </footer>
     ';
 }
