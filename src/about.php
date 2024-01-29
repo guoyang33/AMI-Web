@@ -7,7 +7,7 @@ $content = json_decode(file_get_contents($content_path), true);
 echo '
     <body>
 ';
-html_body_header();
+html_body_header(false, $lang);
 echo '
         <article>
             <h1>' . $content['title'] . '</h1>

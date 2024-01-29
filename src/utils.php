@@ -23,6 +23,51 @@ function get_lang_dict() {
     );
 }
 
+function get_nav_dict() {
+    return array(
+        'about' => array(
+            'name' => array(
+                'zh_TW' => '關於我們',
+                'en' => 'About'
+            ),
+            'id' => '#about',
+            'href' => '/about.php'
+        ),
+        'products' => array(
+            'name' => array(
+                'zh_TW' => '產品介紹',
+                'en' => 'Products'
+            ),
+            'id' => '#products',
+            'href' => '/products.php'
+        ),
+        'news' => array(
+            'name' => array(
+                'zh_TW' => '最新消息',
+                'en' => 'News'
+            ),
+            'id' => '#news',
+            'href' => '/news.php'
+        ),
+        'contact' => array(
+            'name' => array(
+                'zh_TW' => '聯絡我們',
+                'en' => 'Contact'
+            ),
+            'id' => '#contact',
+            'href' => '/contact.php'
+        ),
+        'links' => array(
+            'name' => array(
+                'zh_TW' => '友站連結',
+                'en' => 'Links'
+            ),
+            'id' => '#links',
+            'href' => '/links.php'
+        )
+    );
+}
+
 // 語言參數偵測
 function lang_param_detect() {
     global $page;
@@ -49,63 +94,76 @@ function load_content_json($lang) {
     $page = basename($_SERVER['PHP_SELF'], '.php');
     return json_decode(file_get_contents(CONTENT_JSON_DIR . $lang . '/' . $page . '.json'), true);
 }
-// 顯示語言切換選單
-function show_lang_switch() {
-    echo '
-    <div class="dropdown dropdown-language-switch">
-        語言：
-        <button class="btn dropdown-toggle border" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="dropdown-text">Language</span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="?lang=zh_TW">繁體中文</a></li>
-            <li><a class="dropdown-item" href="?lang=en">English</a></li>
-        </ul>
-    </div>
-    ';
-}
 // 顯示網頁header
-function html_body_header() {
+function html_body_header($is_index = false, $lang = 'en') {
+    $nav_dict = get_nav_dict();
     echo '
     <header>
         <div class="header-logo" onclick="location.href=\'index.php\'"></div>
         <div class="header-nav">
             <nav class="navbar navbar-expand">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#products">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#news">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#links">Links</a>
-                    </li>
+    ';
+    foreach ($nav_dict as $nav) {
+        if ($is_index) {
+            echo '
+                        <li class="nav-item">
+                            <a class="nav-link" href="' . $nav['id'] . '">' . $nav['name'][$lang] . '</a>
+                        </li>
+            ';
+        } else {
+            echo '
+                        <li class="nav-item">
+                            <a class="nav-link" href="' . $nav['href'] . '">' . $nav['name'][$lang] . '</a>
+                        </li>
+            ';
+        }
+    }
+    echo '
                 </ul>
             </nav>
         </div>
         <div class="header-lang">
+    ';
+    switch ($lang) {
+        case 'zh_TW':
+            echo '
+            <a href="?lang=en">English</a>
+            ';
+            break;
+        default:
+            echo '
             <a href="?lang=zh_TW">切換至中文</a>
+            ';
+    }
+    echo '
         </div>
     </header>
     ';
 }
 // 顯示網頁footer
-function html_body_footer() {
-    echo '
-    <footer>
-        <p>&copy; 2023 Awesome Medical Inc.</p>
-        <p>Tel: +886-7-312-0079</p>
-        <p>Fax: +886-7-312-0079</p>
-        <!-- <p>Address: 1F, No. 36, Lane 246, Tone-Meng 3rd Rd., San-Min District 80746, Kaohsiung City, Taiwan, Republic of China</p> -->
-        <p>Address: 1F., No. 36, Ln. 246, Tongmeng 3rd Rd., Sanmin Dist., Kaohsiung City 80746, Taiwan (R.O.C.)</p>
-    </footer>
-    ';
+function html_body_footer($lang = 'en') {
+    switch ($lang) {
+        case 'zh_TW':
+            echo '
+            <footer>
+                <p>&copy; 2023 Awesome Medical Inc.</p>
+                <p>電話: 07-312-0079</p>
+                <p>傳真: 07-312-0079</p>
+                <p>地址: 80746高雄市三民區同盟三路246巷36號1樓</p>
+            </footer>
+            ';
+            break;
+        default:
+            echo '
+            <footer>
+                <p>&copy; 2023 Awesome Medical Inc.</p>
+                <p>Tel: +886-7-312-0079</p>
+                <p>Fax: +886-7-312-0079</p>
+                <!-- <p>Address: 1F, No. 36, Lane 246, Tone-Meng 3rd Rd., San-Min District 80746, Kaohsiung City, Taiwan, Republic of China</p> -->
+                <p>Address: 1F., No. 36, Ln. 246, Tongmeng 3rd Rd., Sanmin Dist., Kaohsiung City 80746, Taiwan (R.O.C.)</p>
+            </footer>
+            ';
+    }
 }
 ?>

@@ -2,56 +2,63 @@
     "title": "關於高展醫療用品",
     "sections": [
         {
-            "title": "Founded",
+            "title": "成立",
             "type": "text",
-            "text": "AWESOME Medical Inc., a brand-new medical in-vitro device (IVD) and medicine import/export distribution company founded in Kaohsiung city, Taiwan, in June 2021."
+            "text": "總部位於中華民國台灣省的高雄市，高展醫療用品事業有限公司（以下簡稱：高展醫療用品）是一家成立於2021年6月的醫療設備與藥品進出口經銷公司。"
         },
         {
-            "title": "Vision",
-            "type": "text",
-            "text": "At Awesome Medical Inc., our unwavering commitment revolves around delivering pharmaceuticals and medical devices that exemplify the highest standards of quality, safety, and effectiveness. We also take pride in extending exceptional services to our valued customers and partners across the globe.<br><br>Our overarching vision is to stand as a premier distributor in the pharmaceutical and medical device sectors, renowned for our steadfast dedication to providing consistently superior customer service. We aim to uphold the principles of integrity and transparency in all our business endeavors."
-        },
-        {
-            "title": "Mission",
-            "type": "text",
-            "text": "Our mission is to collaborate with ministries of health, governmental bodies, pharmaceutical manufacturers, healthcare institutions, hospitals, medical practitioners, and pharmacies on a global scale. Together, we aspire to enhance the health and well-being of individuals by ensuring that essential drug products and medical devices are accessible to all our licensed customers and partners.<br><br>We fulfill this mission by delivering top-tier products, exceptional customer support, and an efficient, secure, and cost-effective distribution network across outpatient and inpatient settings. This is achieved through the diligent maintenance of a highly streamlined and controlled process."
-        },
-        {
-            "title": "Value",
+            "title": "願景",
             "type": "list",
             "list": [
-                "<p>At Awesome Medical Inc., we place the utmost importance on our core value: Customer and Partner Excellence. This value represents the foundation of our mission and vision, guiding every aspect of our business operations.</p>",
-                "<p><b>Customer-Centric Approach</b>: Our dedication to customer and partner satisfaction is unwavering. We recognize that our success hinges on the success and satisfaction of those we serve. To achieve this, we actively engage with our customers and partners, understanding their unique needs and aspirations.</p>",
-                "<p><b>Exceptional Product Quality</b>: We take immense pride in our commitment to delivering pharmaceuticals and medical devices that exemplify the highest standards of quality, safety, and effectiveness. Quality is not just a goal; it's our promise.</p>",
-                "<p><b>Outstanding Customer Support</b>: Exceptional products must be accompanied by exceptional support. Our customer support team is devoted to providing unparalleled assistance and service. We're here to address your needs promptly and efficiently.</p>",
-                "<p><b>Mutually Beneficial Partnerships</b>: Partnerships built on trust and success are at the core of our values. We foster relationships with our partners, ensuring that they are proud to do business with us. Transparency and open communication are our cornerstones, and we actively seek partner feedback on how we can better serve them.</p>",
-                "<p>In summary, our commitment to Customer and Partner Excellence drives us to go above and beyond. We understand that our journey is intrinsically linked with the satisfaction and success of those we serve. Together, we aim to not only meet but exceed your expectations.</p>"
+                "<p>在高展醫療用品，我們堅守承諾，專注於提供最高品質、安全性及療效卓越的藥品與效力優越的醫療設備。我們以極出色的服務，為全球尊貴的客戶及合作夥伴提供支持，深感自豪。</p>",
+                "<p>我們的願景是成為製藥和醫療器械領域的頂級經銷商，以一貫的卓越客戶服務而聞名。在我們的業務中，我們秉持誠實和透明的原則，力求經營不凡。</p>"
             ]
         },
         {
-            "title": "Customer-Centricity",
+            "title": "使命",
             "type": "list",
             "list": [
-                "<p>We acknowledge that ensuring customer satisfaction is fundamental to our ongoing prosperity. We consistently uphold exceptional customer satisfaction by:</p>",
+                "<p>我們的使命是與各國衛生部門、政府機構、藥品製造商、醫療機構、醫院、醫師和藥局合作，攜手努力，確保所有客戶及合作夥伴都能輕易獲得所需的藥品與醫療設備，以提升個人的健康及福祉。</p>",
+                "<p>我們實現這一使命的方式是透過提供優質產品、卓越客戶支援，以及在門診和住院環境中高效、安全與符合經濟效益的分銷系統。我們不斷維護高度簡化及受控的流程，以確保使命的實現。</p>"
+
+            ]
+        },
+        {
+            "title": "核心價值",
+            "type": "list",
+            "list": [
+                "<p>在高展醫療用品，我們格外重視我們的核心價值：與客戶及合作夥伴偕同追求卓越。這一價值觀是我們使命及願景的基石，引導著我們執行各項業務的運作。</p>",
+                "<p><b>以客戶為中心的經營哲學：</b>我們始終執著於提高客戶及合作夥伴的滿意度。我們的成功取決於我們所服務對象的成功及滿意。為了實現這一目標，我們積極與客戶及合作夥伴互動，了解他們獨特的需求與期望。</p>",
+                "<p><b>卓越品質的產品：</b>我們以承諾提供符合最高品質、安全性及療效標準的藥品及效能標準的醫療設備而感到非常自豪。品質不僅是一個目標，而且是我們的承諾。</p>",
+                "<p><b>優質的客戶支持：</b>優質的產品必須伴隨著無與倫比的支持。我們的客戶支持團隊致力於提供無可比擬的協助與服務。我們在此為您迅速高效地解決需求。</p>",
+                "<p><b>互惠互利的合作關係：</b>建立在信任和成功基礎上的合作夥伴關係是我們價值觀的核心。我們促進與合作夥伴的關係，確保他們為能夠與我們做生意而感到自豪。透明及開放的溝通是我們的基石，我們積極尋求合作夥伴的反饋，以了解我們如何更好地為他們提供服務。</p>",
+                "<p>總之，與客戶及合作夥伴偕同追求卓越是我們不變的承諾。我們所服務對象的成功及滿意是我們邁向成功的致勝法寶。我們的目標不僅是滿足您們的期望，更是要超越您們的期許。</p>"
+            ]
+        },
+        {
+            "title": "以客戶為中心",
+            "type": "list",
+            "list": [
+                "<p>確保客戶滿意是我們持續繁榮的不二法門。透過以下方式，能讓我們持續保持出色的客戶滿意度：</p>",
                 "<ul>",
-                "<li>Gaining deep insights into our industry's dynamics, understanding our customers' core priorities, and staying attuned to relevant developments that affect our operations. We make it our mission to comprehend the ramifications of our actions on our customers.</li>",
-                "<li>Pursuing absolute precision and transparency in every facet of customer-related activities, encompassing orders, communications, and deliveries.</li>",
-                "<li>Cultivating enduring and trustworthy partnerships with our customers, rooted in integrity and confidence.</li>",
-                "<li>Actively soliciting and incorporating customer input into our processes.</li>",
-                "<li>Demonstrating responsiveness to customer inquiries and feedback.</li>",
+                "<li>深入了解我們行業的動態，理解客戶的核心優先事項，並保持對影響我們運營的相關發展的敏感度。因此，充分理解我們的營銷作為對客戶的影響成為我們的使命。</li>",
+                "<li>在與客戶互動的各個相關構面中，包括訂單處理、溝通及交貨（交機），都落實絕對的精確度與透明度。</li>",
+                "<li>在誠信與自信之基礎上，建立及培養與客戶的持久及值得信賴的合作夥伴關係。</li>",
+                "<li>積極徵求客戶的建言，並將之納入我們的營銷流程中。</li>",
+                "<li>對客戶的諮詢及反饋意見做出快速的回應。</li>",
                 "</ul>"
             ]
         },
         {
-            "title": "Partner-Centricity",
+            "title": "以合作夥伴為中心",
             "type": "list",
             "list": [
-                "<p>Our partner manufacturing and distribution companies play a pivotal role in our business strategy, and we prioritize their well-being by:</p>",
+                "<p>我們的合作夥伴包括了藥品及醫療設備的製造公司及經銷公司，他們在我們的經營策略中扮演著重要的角色，透過以下方式，我們能夠優先考慮他們的福祉：</p>",
                 "<ul>",
-                "<li>Cultivating strong relationships with our partners, fostering an environment where they take pride in collaborating with us.</li>",
-                "<li>Maintaining unwavering transparency in our communications and actively soliciting partner feedback to enhance our service to them continually.</li>",
-                "<li>Recognizing the substantial and invaluable contributions our partners make to our business and overall success.</li>",
-                "<li>Proposing innovative approaches to conducting business that mutually benefit our partners.</li>",
+                "<li>建立與培養我們與合作夥伴之間堅固的關係，並營造一個讓他們以與我們合作感到自豪的環境。</li>",
+                "<li>在我們的溝通中保持堅定的透明度，積極徵求合作夥伴的反饋意見，不斷提升我們對他們的服務品質與滿意度。</li>",
+                "<li>感激合作夥伴為我們的業務及整體成功所做出的重大而寶貴的貢獻。</li>",
+                "<li>提議創新的業務經營模式，旨在讓我們與合作夥伴雙方受益。</li>",
                 "</ul>"
             ]
         }

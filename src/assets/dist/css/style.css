@@ -71,10 +71,11 @@ article > hr {
 }
 article > h1 {
     margin: 1rem 0;
+    text-align: center;
 }
 article > h2 {
     margin: 1rem 0;
-    text-align: center;
+    /* text-align: center; */
 }
 article>p {
     margin: 2rem 0;
