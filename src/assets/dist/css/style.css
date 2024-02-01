@@ -57,6 +57,7 @@ section {
     margin: 1rem 2rem;
     height: 70vh;
     vertical-align: middle;
+    text-align: center;
 }
 section > h1 h2 p button {
     margin: auto;
