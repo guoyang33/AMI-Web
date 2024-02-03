@@ -54,6 +54,12 @@
                 "<li>Proposing innovative approaches to conducting business that mutually benefit our partners.</li>",
                 "</ul>"
             ]
+        },
+        {
+            "title": "Company Structure",
+            "type": "image",
+            "src": "assets/img/structure_en.png",
+            "alt": "Company Structure"
         }
     ]
 }

@@ -61,6 +61,12 @@
                 "<li>提議創新的業務經營模式，旨在讓我們與合作夥伴雙方受益。</li>",
                 "</ul>"
             ]
+        },
+        {
+            "title": "組織架構",
+            "type": "image",
+            "src": "assets/img/structure_zh.png",
+            "alt": "組織圖"
         }
     ]
 }

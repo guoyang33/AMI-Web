@@ -23,6 +23,11 @@ foreach ($content['sections'] as $section) {
                 echo $item, "\n";
             }
             break;
+        case 'image':
+            echo '
+            <img src="' . $section['src'] . '" alt="' . $section['alt'] . '">
+            ';
+            break;
         default:
             echo '
             <p>' . $section['text'] . '</p>
@@ -34,6 +39,9 @@ echo '
 ';
 html_body_footer();
 echo '
+        <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/dist/js/main.js"></script>
+    </body>
 </html>
 ';
 ?>

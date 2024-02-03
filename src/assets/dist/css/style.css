@@ -55,7 +55,6 @@ div.header-lang {
 ----------------------------------------------- */
 section {
     margin: 1rem 2rem;
-    height: 70vh;
     text-align: center;
 }
 section > h1 h2 p button {
@@ -100,4 +99,15 @@ footer p {
     div.header-nav {
         display: none;
     }
+}
+
+/* DEMO */
+#demo {
+    background-image: url('../../products/dnabg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #F2F2F2;
+    margin: 2rem 0;
+    padding: 2rem;
 }

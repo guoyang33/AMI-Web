@@ -160,7 +160,6 @@ function html_body_footer($lang = 'en') {
                 <p>&copy; 2023 Awesome Medical Inc.</p>
                 <p>Tel: +886-7-312-0079</p>
                 <p>Fax: +886-7-312-0079</p>
-                <!-- <p>Address: 1F, No. 36, Lane 246, Tone-Meng 3rd Rd., San-Min District 80746, Kaohsiung City, Taiwan, Republic of China</p> -->
                 <p>Address: 1F., No. 36, Ln. 246, Tongmeng 3rd Rd., Sanmin Dist., Kaohsiung City 80746, Taiwan (R.O.C.)</p>
             </footer>
             ';
