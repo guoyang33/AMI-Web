@@ -49,46 +49,7 @@ foreach ($content['contact']['list'] as $item) {
 }
 echo '
             <hr style="margin: 4rem 15rem">
-            <div class="alert alert-primary col-sm-8 offset-sm-2" role="alert">
-                <h2>' . $content['contact']['form']['title'] . '</h2>
-                <form action="contact_target.php" method="post">
-                    <div class="form-group row">
-                        <label for="name" class="col col-form-label">' . $content['contact']['form']['field']['cust_name']['label'] . '</label>
-                        <div class="">
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="email" class=" col-form-label">' . $content['contact']['form']['field']['email']['label'] . '</label>
-                        <div class="">
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="phone" class=" col-form-label">' . $content['contact']['form']['field']['phone']['label'] . '</label>
-                        <div class="">
-                            <input type="tel" class="form-control" id="phone" name="phone" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="address" class=" col-form-label">' . $content['contact']['form']['field']['address']['label'] . '</label>
-                        <div class="">
-                            <input type="text" class="form-control" id="address" name="address" required>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="message" class=" col-form-label">' . $content['contact']['form']['field']['message']['label'] . '</label>
-                        <div class="">
-                            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-10 offset-sm-1 mt-1">
-                            <button type="submit" class="btn btn-primary">' . $content['contact']['form']['button']['text'] . '</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+            
 
         </section><!-- #contact -->
 
