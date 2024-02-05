@@ -10,6 +10,9 @@ body {
     line-height: 1.7;
     color: #06263D;
     background: #FFF;
+    background-image: url(../../img/5302924.jpg);
+    background-repeat: repeat;
+    background-size: fill;
 }
 a {
     text-decoration: none;;
@@ -18,7 +21,7 @@ a {
 /* HEADER
 ----------------------------------------------- */
 header {
-    background: #ffffff;
+    background: transparent;
     color: #06263D;
     /* padding: 1rem; */
     text-align: center;
@@ -30,7 +33,7 @@ div.header-logo {
     display: flex;
     cursor: pointer;
     width: clamp(5rem, 15vw, 10rem);
-    background-image: url('../../awe_logo.png');
+    background-image: url('../../awe_logo_transparent.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -46,6 +49,9 @@ div.header-nav {
     align-items: end;
     margin-bottom: 1rem;
 }
+a.nav-link {
+    color: #06263D;
+}
 div.header-lang {
     margin: 1rem;
     display: flex;
@@ -54,7 +60,7 @@ div.header-lang {
 /* MAIN
 ----------------------------------------------- */
 section {
-    margin: 1rem 2rem;
+    margin: 15vh 2rem;
     text-align: center;
 }
 section > h1 h2 p button {
@@ -76,7 +82,7 @@ article > h2 {
     margin: 1rem 0;
     /* text-align: center; */
 }
-article>p {
+article > p {
     margin: 2rem 0;
 }
 
@@ -103,6 +109,18 @@ footer p {
 
 /* DEMO */
 #demo {
+    background-image: url('../../products/dnabg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #F2F2F2;
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+/* PRODUCT
+----------------------------------------------- */
+#prod-1 {
     background-image: url('../../products/dnabg.png');
     background-repeat: no-repeat;
     background-position: center;

@@ -8,22 +8,43 @@
         }
     },
     "products": {
-        "title": "Products"
+        "title": "Products",
+        "products": [
+            {
+                "type": "list",
+                "title": [
+                    {
+                        "text": "Dedicated to developing and delivering hormone therapeutics",
+                        "level": "h2"
+                    },
+                    {
+                        "text": "A global pharmaceutical company partners focused on chronic endocrine conditions",
+                        "level": "h3"
+                    }
+                ],
+                "list": [
+                    "<ul>",
+                    "   <li>DIURNAL, a global specialty pharmaceutical company focused on chronic endocrine diseases</li>",
+                    "   <li>CITRINE Medicine, a pharmaceutical company and focused on providing effective and affordable therapeutic solutions to rare disease patients in the Greater China, holds the exclusive distribution rights for DIURNAL's products across Asia</li>",
+                    "   <li>AMI, a pharmaceutical distribution firm dedicated to delivering effective and accessible therapeutic solutions to rare disease patients in Taiwan, possesses the distribution rights for DIURNAL's products via its partnership with CITRINE Medicine</li>",
+                    "</ul>",
+                    "<div style='text-align: center'>",
+                    "   <button id='prod-1-pro-btn-en' class='btn btn-primary' role='button' style='padding: 0.5rem 2rem; margin: 0 1rem'>Healcare<br>Professionals</button>",
+                    "   <a class='btn btn-info' href='https://www.diurnal.com/NonUkResidents/Non-HCP/home' role='button' style='padding: 0.5rem 2rem; margin: 0 1rem'>Patients /<br>Public</a>",
+                    "</div>"
+                ],
+                "style": "text-align: left",
+                "class": "prod-1 rounded",
+                "id": "prod-1"
+            }
+        ]
     },
-    "news": {
-        "title": "News",
-        "text": "Stay up to date with the latest news and events.",
-        "medicine_updates": {
-            "title": "Medicine Updates",
-            "text": "Stay up to date with the latest medicine updates."
+    "medicine_updates": {
+        "medicine_information": {
+            "title": "Medicine Information"
         },
         "news": {
-            "title": "News",
-            "text": "Stay up to date with the latest news and events."
-        },
-        "button": {
-            "link": "news.php",
-            "text": "News"
+            "title": "News"
         }
     },
     "contact": {

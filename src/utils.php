@@ -165,4 +165,22 @@ function html_body_footer($lang = 'en') {
             ';
     }
 }
+
+function product_card($product) {
+    echo '<div id="'. $product['id'] . '" class="' . $product['class'] . '" style="' . $product['style'] . '">' . "\n";
+    foreach ($product['title'] as $title) {
+        echo '<' . $title['level'] . '>' . $title['text'] . '</' . $title['level'] . '>' . "\n";
+    }
+    switch ($product['type']) {
+        case 'list':
+            foreach ($product['list'] as $item) {
+                echo $item, "\n";
+            }
+            break;
+        default:
+            echo '<p>' . $product['text'] . '</p>' . "\n";
+    }
+    echo '</div>' . "\n";
+}
+
 ?>

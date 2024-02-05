@@ -13,23 +13,27 @@ echo '
         <section id="about">
             <h1>' . $content['about']['title'] . '</h1>
             <h2>' . $content['about']['text'] . '</h2>
-            <a class="btn btn-primary" href="about.php" role="button">' . $content['about']['button']['text'] . '</a>
+            <a class="btn btn-primary mt-3" href="about.php" role="button">' . $content['about']['button']['text'] . '</a>
         </section><!-- #about -->
 
         <section id="products">
             <h1>' . $content['products']['title'] . '</h1>
+';
+foreach ($content['products']['products'] as $product) {
+    product_card($product);
+}
+echo '
         </section><!-- #products -->
 
-        <section id="news">
-            <h1>' . $content['news']['title'] . '</h1>
+        <section id="news" class="row mx-0">
             <div class="col-md-6">
-                <h2>' . $content['news']['medicine_updates']['title'] . '</h2>
-                <p>' . $content['news']['medicine_updates']['text'] . '</p>
-                <table></table>
+                <h2>' . $content['medicine_updates']['medicine_information']['title'] . '</h2>
+                <table>
+                
+                </table>
             </div>
             <div class="col-md-6">
-                <h2>' . $content['news']['news']['title'] . '</h2>
-                <p>' . $content['news']['news']['text'] . '</p>
+                <h2>' . $content['medicine_updates']['news']['title'] . '</h2>
                 <table></table>
             </div>
         </section><!-- #news -->

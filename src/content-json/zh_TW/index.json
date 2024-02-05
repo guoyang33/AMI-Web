@@ -1,9 +1,81 @@
 {
-    "title": "追求卓越，服務全球",
-    "text": "高展醫療用品，以客戶為中心，提供最高品質、安全性及療效卓越的藥品與醫療設備，並以卓越的客戶服務和互惠互利的合作關係，服務全球的客戶和合作夥伴。",
-    "button": {
-        "link": "about.php",
-        "text": "關於高展"
+    "about": {
+        "title": "高展醫療用品",
+        "text": "您最值得信賴的健康夥伴",
+        "button": {
+            "link": "about.php",
+            "text": "關於高展"
+        }
+    },
+    "products": {
+        "title": "產品介紹",
+        "products": [
+            {
+                "type": "list",
+                "title": [
+                    {
+                        "text": "Dedicated to developing and delivering hormone therapeutics",
+                        "level": "h2"
+                    },
+                    {
+                        "text": "A global pharmaceutical company partners focused on chronic endocrine conditions",
+                        "level": "h3"
+                    }
+                ],
+                "list": [
+                    "<ul>",
+                    "   <li>DIURNAL, a global specialty pharmaceutical company focused on chronic endocrine diseases</li>",
+                    "   <li>CITRINE Medicine, a pharmaceutical company and focused on providing effective and affordable therapeutic solutions to rare disease patients in the Greater China, holds the exclusive distribution rights for DIURNAL's products across Asia</li>",
+                    "   <li>AMI, a pharmaceutical distribution firm dedicated to delivering effective and accessible therapeutic solutions to rare disease patients in Taiwan, possesses the distribution rights for DIURNAL's products via its partnership with CITRINE Medicine</li>",
+                    "</ul>",
+                    "<div style='text-align: center'>",
+                    "   <button id='prod-1-pro-btn-zh' class='btn btn-primary' role='button' style='padding: 0.5rem 2rem; margin: 0 1rem'>您是<br>醫療專業人員</button>",
+                    "   <a class='btn btn-info' href='https://www.diurnal.com/NonUkResidents/Non-HCP/home' role='button' style='padding: 0.5rem 2rem; margin: 0 1rem'>您是<br>病人或民眾</a>",
+                    "</div>"
+                ],
+                "style": "text-align: left",
+                "class": "prod-1 rounded",
+                "id": "prod-1"
+            }
+        ]
+    },
+    "medicine_updates": {
+        "medicine_information": {
+            "title": "醫藥專欄"
+        },
+        "news": {
+            "title": "最新消息"
+        }
+    },
+    "contact": {
+        "title": "Contact Us",
+        "text": "We are here to help. Contact us with any questions or concerns.",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "button": "Send"
+        }
+    },
+    "links": {
+        "title": "友站連結",
+        "links": [
+            {
+                "link": "https://www.fda.gov.tw/TC/index.aspx",
+                "text": "衛生福利部食品藥物管理署"
+            },
+            {
+                "link": "https://www.hpa.gov.tw/SiteMap/SiteMap.aspx",
+                "text": "衛生福利部國民健康署"
+            },
+            {
+                "link": "http://www.rarestonegroup.com/en/38/",
+                "text": "瑯鏵醫藥"
+            },
+            {
+                "link": "https://www.diurnal.com/",
+                "text": "DIURNAL Limited"
+            }
+        ]
     }
-
 }
