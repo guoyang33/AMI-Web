@@ -6,9 +6,9 @@
 
 date_default_timezone_set('Asia/Taipei');
 
-$user = 'ami_root';
+$user = 'awemedco_web_php';
 $pass = 'B2Lw4O/(9HQbSSfN';
-$db = 'ami_web';
+$db = 'awemedco_web';
 $host = 'localhost';
 $port = 3306;
 $dns = "mysql:host=$host;dbname=$db;port=$port;charset=utf8";

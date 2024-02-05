@@ -47,7 +47,7 @@ function get_nav_dict() {
                 'en' => 'News'
             ),
             'id' => '#news',
-            'href' => '/news.php'
+            'href' => '/medicine_updates.php'
         ),
         'contact' => array(
             'name' => array(
@@ -181,6 +181,142 @@ function product_card($product) {
             echo '<p>' . $product['text'] . '</p>' . "\n";
     }
     echo '</div>' . "\n";
+}
+
+function show_medicine_infomation($dbh, $lang = 'en', $limit = 6, $offset = 0) {
+    echo '
+    <table class="table table-striped table-hover table-bordered">
+        <thead>
+    ';
+    switch ($lang) {
+        case 'zh_TW':
+            echo '
+            <tr>
+                <th >NO.</th>
+                <th>標題</th>
+                <th>發布日期</th>
+            </tr>
+            ';
+            break;
+        default:
+            echo '
+            <tr>
+                <th>NO.</th>
+                <th>Subject</th>
+                <th>Published Date</th>
+            </tr>
+            ';
+    }
+    echo '
+        </thead>
+        <tbody>
+    ';
+    $sth = $dbh->prepare("SELECT `id`, `subject`, `pub_date` FROM `medicine_information` ORDER BY `pub_date` ASC LIMIT :limit OFFSET :offset");
+    $sth->bindParam(':limit', $limit, PDO::PARAM_INT);
+    $sth->bindParam(':offset', $offset, PDO::PARAM_INT);
+    $sth->execute();
+    $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+    if (count($result) > 0) {
+        $i = 0;
+        foreach ($result as $row) {
+            $i++;
+            if ($i > 5) {
+                break;
+            }
+            echo '
+            <tr>
+                <td>' . $row['id'] . '</td>
+                <td>' . $row['subject'] . '</td>
+                <td>' . $row['pub_date'] . '</td>
+            </tr>
+            ';
+        }
+        if ($i > 5) {
+            echo '
+                <tr>
+                    <td colspan="3"><a href="medicine_information.php">More...</a></td>
+                </tr>
+            ';
+        }
+    } else {
+        echo '
+            <tr>
+                <td colspan="3">No data</td>
+            </tr>
+        ';
+    }
+    echo '
+        </tbody>
+    </table>
+    ';
+}
+
+function show_news($dbh, $lang = 'en', $limit = 6, $offset = 0) {
+    echo '
+    <table class="table table-striped table-hover table-bordered">
+        <thead>
+    ';
+    switch ($lang) {
+        case 'zh_TW':
+            echo '
+            <tr>
+                <th >NO.</th>
+                <th>標題</th>
+                <th>發布日期</th>
+            </tr>
+            ';
+            break;
+        default:
+            echo '
+            <tr>
+                <th>NO.</th>
+                <th>Subject</th>
+                <th>Published Date</th>
+            </tr>
+            ';
+    }
+    echo '
+        </thead>
+        <tbody>
+    ';
+    $sth = $dbh->prepare("SELECT `id`, `subject`, `pub_date` FROM `news` ORDER BY `pub_date` ASC LIMIT :limit OFFSET :offset");
+    $sth->bindParam(':limit', $limit, PDO::PARAM_INT);
+    $sth->bindParam(':offset', $offset, PDO::PARAM_INT);
+    $sth->execute();
+    $result = $sth->fetchAll(PDO::FETCH_ASSOC);
+    if (count($result) > 0) {
+        $i = 0;
+        foreach ($result as $row) {
+            $i++;
+            if ($i > 5) {
+                break;
+            }
+            echo '
+            <tr>
+                <td>' . $row['id'] . '</td>
+                <td>' . $row['subject'] . '</td>
+                <td>' . $row['pub_date'] . '</td>
+            </tr>
+            ';
+        }
+        if ($i > 5) {
+            echo '
+                <tr>
+                    <td colspan="3"><a href="news.php">More...</a></td>
+                </tr>
+            ';
+        }
+    } else {
+        echo '
+            <tr>
+                <td colspan="3">No data</td>
+            </tr>
+        ';
+    }
+    echo '
+        </tbody>
+    </table>
+    ';
 }
 
 ?>

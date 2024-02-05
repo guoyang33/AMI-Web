@@ -14,19 +14,19 @@
                 "type": "list",
                 "title": [
                     {
-                        "text": "Dedicated to developing and delivering hormone therapeutics",
+                        "text": "致力於開發和提供荷爾蒙療法",
                         "level": "h2"
                     },
                     {
-                        "text": "A global pharmaceutical company partners focused on chronic endocrine conditions",
+                        "text": "專注於慢性內分泌疾病的全球製藥公司合作夥伴",
                         "level": "h3"
                     }
                 ],
                 "list": [
                     "<ul>",
-                    "   <li>DIURNAL, a global specialty pharmaceutical company focused on chronic endocrine diseases</li>",
-                    "   <li>CITRINE Medicine, a pharmaceutical company and focused on providing effective and affordable therapeutic solutions to rare disease patients in the Greater China, holds the exclusive distribution rights for DIURNAL's products across Asia</li>",
-                    "   <li>AMI, a pharmaceutical distribution firm dedicated to delivering effective and accessible therapeutic solutions to rare disease patients in Taiwan, possesses the distribution rights for DIURNAL's products via its partnership with CITRINE Medicine</li>",
+                    "   <li>DIURNAL：一家專注於慢性內分泌疾病的全球專業製藥公司</li>",
+                    "   <li>CITRINE Medicine：一家專注於為大中華區罕見疾病患者提供有效且負擔得起的治療解決方案的製藥公司，擁有 DIURNAL 產品在亞洲的獨家經銷權</li>",
+                    "   <li>AMI：我們是一家藥品分銷公司，致力於為台灣罕見疾病患者提供有效且易於使用的治療解決方案，透過與 CITRINE Medicine 合作，擁有 DIURNAL 產品的分銷權</li>",
                     "</ul>",
                     "<div style='text-align: center'>",
                     "   <button id='prod-1-pro-btn-zh' class='btn btn-primary' role='button' style='padding: 0.5rem 2rem; margin: 0 1rem'>您是<br>醫療專業人員</button>",
@@ -48,13 +48,48 @@
         }
     },
     "contact": {
-        "title": "Contact Us",
-        "text": "We are here to help. Contact us with any questions or concerns.",
+        "title": "聯絡我們",
+        "type": "list",
+        "list": [
+            "<p>任何有關本公產品之問題，竭誠歡迎您來電或 e-mail 洽詢。</p>",
+            "<p>電話：<a href='tel:+886-7-312-0079'>+886-7-312-0079</a></p>",
+            "<p>傳真：+886-7-312-0079</p>",
+            "<p>電子信箱：<a href='mailto:info@awe-med.com'>info@awe-med.com</a></p>",
+            "<p>地址：80746 高雄市三民區同盟三路 246 巷 36 號 1 樓</p>"
+        ],
         "form": {
-            "name": "Name",
-            "email": "Email",
-            "message": "Message",
-            "button": "Send"
+            "title": "或是留下您的訊息，我們將盡快回覆您",
+            "text": "",
+            "field": {
+                "cust_name": {
+                    "label": "您的大名",
+                    "type": "text",
+                    "required": true
+                },
+                "email": {
+                    "label": "電子信箱",
+                    "type": "email",
+                    "required": true
+                },
+                "phone": {
+                    "label": "聯絡電話",
+                    "type": "tel",
+                    "required": true
+                },
+                "address": {
+                    "label": "聯絡地址",
+                    "type": "text",
+                    "required": false
+                },
+                "message": {
+                    "label": "留言訊息",
+                    "type": "textarea",
+                    "required": true
+                }
+            },
+            "button": {
+                "text": "送出"
+            }
         }
     },
     "links": {
