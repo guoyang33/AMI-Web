@@ -3,6 +3,7 @@
 /*
  * html_head.php
  */
+date_default_timezone_set('Asia/Taipei');
 header("Content-Type: text/html; charset=utf-8");
 require_once 'utils.php';
 
