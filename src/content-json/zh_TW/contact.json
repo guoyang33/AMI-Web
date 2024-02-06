@@ -1,0 +1,39 @@
+{
+    "title": "線上留言",
+    "text": "歡迎您留下訊息，我們將會盡快回覆您。",
+    "form": {
+        "fields": {
+            "cust_name": {
+                "label": "姓名",
+                "type": "text",
+                "placeholder": "請輸入您的大名",
+                "required": true
+            },
+            "email": {
+                "label": "電子郵件",
+                "type": "email",
+                "placeholder": "請輸入您的Email",
+                "required": true
+            },
+            "phone": {
+                "label": "聯絡電話",
+                "type": "tel",
+                "placeholder": "請輸入您的聯絡電話",
+                "required": true
+            },
+            "address": {
+                "label": "聯絡地址",
+                "type": "textarea",
+                "placeholder": "請輸入您的地址",
+                "required": false
+            },
+            "message": {
+                "label": "留言訊息",
+                "type": "textarea",
+                "placeholder": "請輸入您的留言",
+                "required": true
+            }
+        },
+        "submit": "送出"
+    }
+}

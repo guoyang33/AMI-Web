@@ -48,8 +48,7 @@ foreach ($content['contact']['list'] as $item) {
     echo $item, "\n";
 }
 echo '
-            <hr style="margin: 4rem 15rem">
-            
+            <a class="btn btn-primary" href="contact.php" role="button">' . $content['contact']['button']['text'] . '</a>
 
         </section><!-- #contact -->
 

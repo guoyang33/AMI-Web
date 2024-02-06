@@ -57,6 +57,9 @@
             "<p>電子信箱：<a href='mailto:info@awe-med.com'>info@awe-med.com</a></p>",
             "<p>地址：80746 高雄市三民區同盟三路 246 巷 36 號 1 樓</p>"
         ],
+        "button": {
+            "text": "線上留言"
+        },
         "form": {
             "title": "或是留下您的訊息，我們將盡快回覆您",
             "text": "",
