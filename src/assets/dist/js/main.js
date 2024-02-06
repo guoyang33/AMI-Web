@@ -1,8 +1,8 @@
 function call_redirect_confirm_box(msg, ok_url, cancel_url) {
     if (confirm(msg)) {
-        window.location.href = ok_url;
+        window.open(ok_url, '_blank');
     } else {
-        window.location.href = cancel_url;
+        window.open(cancel_url, '_blank');
     }
 }
 

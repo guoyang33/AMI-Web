@@ -9,7 +9,7 @@ echo '
 ';
 html_body_header(false, $lang);
 echo '
-        <article>
+        <article class="bg-light p-3">
             <h1>' . $content['title'] . '</h1>
 ';
 foreach ($content['sections'] as $section) {

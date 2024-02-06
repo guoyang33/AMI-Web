@@ -183,7 +183,7 @@ function product_card($product) {
     echo '</div>' . "\n";
 }
 
-function show_medicine_infomation($dbh, $lang = 'en', $limit = 6, $offset = 0) {
+function show_medicine_infomation($dbh, $lang = 'en', $limit = 6, $offset = 0, $page_btn = false) {
     echo '
     <table class="table table-striped table-hover table-bordered">
         <thead>
@@ -192,18 +192,18 @@ function show_medicine_infomation($dbh, $lang = 'en', $limit = 6, $offset = 0) {
         case 'zh_TW':
             echo '
             <tr>
-                <th >NO.</th>
-                <th>標題</th>
-                <th>發布日期</th>
+                <th class="col-sm-1">NO.</th>
+                <th class="text-center">主題</th>
+                <th class="col-sm-1">發布日期</th>
             </tr>
             ';
             break;
         default:
             echo '
             <tr>
-                <th>NO.</th>
-                <th>Subject</th>
-                <th>Published Date</th>
+                <th class="col-sm-1">NO.</th>
+                <th class="text-center">Subject</th>
+                <th class="col-sm-1">Date</th>
             </tr>
             ';
     }
@@ -224,7 +224,7 @@ function show_medicine_infomation($dbh, $lang = 'en', $limit = 6, $offset = 0) {
                 break;
             }
             echo '
-            <tr>
+            <tr style="cursor: pointer;" onclick="window.open(\'medicine_information_detail.php?id=' . $row['id'] . '\', \'_blank\')">
                 <td>' . $row['id'] . '</td>
                 <td>' . $row['subject'] . '</td>
                 <td>' . $row['pub_date'] . '</td>
@@ -234,7 +234,7 @@ function show_medicine_infomation($dbh, $lang = 'en', $limit = 6, $offset = 0) {
         if ($i > 5) {
             echo '
                 <tr>
-                    <td colspan="3"><a href="medicine_information.php">More...</a></td>
+                    <td colspan="3" class="text-center text-bg-primary" style="cursor: pointer;" onclick="location.href=\'medicine_information.php\'">More...</td>
                 </tr>
             ';
         }
@@ -251,7 +251,9 @@ function show_medicine_infomation($dbh, $lang = 'en', $limit = 6, $offset = 0) {
     ';
 }
 
-function show_news($dbh, $lang = 'en', $limit = 6, $offset = 0) {
+function show_news($dbh, $lang = 'en', $limit = 5, $offset = 0, $page_btn = false) {
+    // 檢查是否有「更多」按鈕
+    $x_limit = $limit + 1;
     echo '
     <table class="table table-striped table-hover table-bordered">
         <thead>
@@ -260,18 +262,18 @@ function show_news($dbh, $lang = 'en', $limit = 6, $offset = 0) {
         case 'zh_TW':
             echo '
             <tr>
-                <th >NO.</th>
-                <th>標題</th>
-                <th>發布日期</th>
+                <th class="col-sm-1">NO.</th>
+                <th class="text-center">主題</th>
+                <th class="col-sm-1">發布日期</th>
             </tr>
             ';
             break;
         default:
             echo '
             <tr>
-                <th>NO.</th>
-                <th>Subject</th>
-                <th>Published Date</th>
+                <th class="col-sm-1">NO.</th>
+                <th class="text-center">Subject</th>
+                <th class="col-sm-1">Date</th>
             </tr>
             ';
     }
@@ -279,32 +281,43 @@ function show_news($dbh, $lang = 'en', $limit = 6, $offset = 0) {
         </thead>
         <tbody>
     ';
-    $sth = $dbh->prepare("SELECT `id`, `subject`, `pub_date` FROM `news` ORDER BY `pub_date` ASC LIMIT :limit OFFSET :offset");
-    $sth->bindParam(':limit', $limit, PDO::PARAM_INT);
-    $sth->bindParam(':offset', $offset, PDO::PARAM_INT);
+    $sth = $dbh->prepare("SELECT `id`, `subject`, `pub_date` FROM `news` ORDER BY `pub_date` ASC LIMIT {$x_limit} OFFSET {$offset}");
     $sth->execute();
     $result = $sth->fetchAll(PDO::FETCH_ASSOC);
     if (count($result) > 0) {
         $i = 0;
         foreach ($result as $row) {
             $i++;
-            if ($i > 5) {
+            if ($i > $limit) {
                 break;
             }
             echo '
-            <tr>
+            <tr style="cursor: pointer;" onclick="window.open(\'news_detail.php?id=' . $row['id'] . '\', \'_blank\')">
                 <td>' . $row['id'] . '</td>
                 <td>' . $row['subject'] . '</td>
                 <td>' . $row['pub_date'] . '</td>
             </tr>
             ';
         }
-        if ($i > 5) {
-            echo '
-                <tr>
-                    <td colspan="3"><a href="news.php">More...</a></td>
-                </tr>
-            ';
+        if ($i > $limit) {
+            if ($page_btn) {
+                echo '
+                    <tr>
+                        <td colspan="3">
+                ';
+                if ($offset > 0) {
+                    echo '
+                            <a href="?offset=' . ($offset - $limit) . '" class="btn btn-primary" style="margin-left: 1rem">Prev</a>
+                    ';
+                }
+
+            } else {
+                echo '
+                    <tr>
+                        <td colspan="3" class="text-center text-bg-primary" style="cursor: pointer;" onclick="window.open(\'news.php\', \'_blank\')">More...</td>
+                    </tr>
+                ';
+            }
         }
     } else {
         echo '

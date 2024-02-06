@@ -32,8 +32,28 @@
                 "type": "textarea",
                 "placeholder": "請輸入您的留言",
                 "required": true
+            },
+            "captcha": {
+                "label": "Captcha",
+                "type": "captcha",
+                "placeholder": "",
+                "required": true
             }
         },
         "submit": "送出"
-    }
+    },
+    "button": {
+        "back": {
+            "text": "返回"
+        }
+    },
+    "success": {
+        "title": "感謝您！",
+        "text": "您的訊息已成功送出。我們將會盡快回覆您。"
+    },
+    "fail": {
+        "title": "發生錯誤",
+        "text": "抱歉，您的訊息送出失敗。請再試一次，或者請透過電話與電子信箱直接聯絡我們。"
+    },
+    "captcha_incorrect": "驗證碼錯誤！請再試一次。"
 }

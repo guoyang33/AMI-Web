@@ -30,7 +30,7 @@
                     "</ul>",
                     "<div style='text-align: center'>",
                     "   <button id='prod-1-pro-btn-en' class='btn btn-primary' role='button' style='padding: 0.5rem 2rem; margin: 0 1rem'>Healcare<br>Professionals</button>",
-                    "   <a class='btn btn-info' href='https://www.diurnal.com/NonUkResidents/Non-HCP/home' role='button' style='padding: 0.5rem 2rem; margin: 0 1rem'>Patients /<br>Public</a>",
+                    "   <a class='btn btn-info' href='https://www.diurnal.com/NonUkResidents/Non-HCP/home' target='_blank' role='button' style='padding: 0.5rem 2rem; margin: 0 1rem'>Patients /<br>Public</a>",
                     "</div>"
                 ],
                 "style": "text-align: left",
@@ -49,7 +49,17 @@
     },
     "contact": {
         "title": "Contact Us",
-        "text": "We are here to help. Contact us with any questions or concerns.",
+        "type": "list",
+        "list": [
+            "<p>Any questions or comments? Please feel free to contact us.</p>",
+            "<p>Tel: <a href='tel:+886-7-312-0079'>+886-7-312-0079</a></p>",
+            "<p>Fax: +886-7-312-0079</p>",
+            "<p>E-mail: <a href='mailto:info@awe-med.com'>info@awe-med.com</a></p>",
+            "<p>Address: 1F., No. 36, Ln. 246, Tongmeng 3rd Rd., Sanmin Dist., Kaohsiung City 80746, Taiwan (R.O.C.)</p>"
+        ],
+        "button": {
+            "text": "Leave Message to Us"
+        },
         "form": {
             "name": "Name",
             "email": "Email",

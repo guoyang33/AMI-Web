@@ -58,6 +58,13 @@ div.header-lang {
 
 /* MAIN
 ----------------------------------------------- */
+main > h1 {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+/* SECTION
+----------------------------------------------- */
 section {
     margin: 15vh 2rem;
     text-align: center;
@@ -67,6 +74,8 @@ section > h1 h2 p button {
     text-align: center;
 }
 
+/* ARTICLE
+----------------------------------------------- */
 article {
     margin: 2rem 4rem 6rem 4rem;
 }
