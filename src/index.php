@@ -26,7 +26,7 @@ foreach ($content['products']['products'] as $product) {
 echo '
         </section><!-- #products -->
 
-        <section id="news" class="row mx-0">
+        <section id="news" class="row mx-4">
             <div class="col-md-6">
                 <h2>' . $content['medicine_updates']['medicine_information']['title'] . '</h2>
 ';

@@ -19,14 +19,14 @@
                 "   <li>CITRINE Medicine, a pharmaceutical company and focused on providing effective and affordable therapeutic solutions to rare disease patients in the Greater China, holds the exclusive distribution rights for DIURNAL's products across Asia</li>",
                 "   <li>AMI, a pharmaceutical distribution firm dedicated to delivering effective and accessible therapeutic solutions to rare disease patients in Taiwan, possesses the distribution rights for DIURNAL's products via its partnership with CITRINE Medicine</li>",
                 "</ul>",
-                "<div style='text-align: center'>",
+                "<div class='text-center mt-5'>",
                 "   <button id='prod-1-pro-btn-en' class='btn btn-primary' role='button' style='padding: 0.5rem 2rem; margin: 0 1rem'>Healcare<br>Professionals</button>",
                 "   <a class='btn btn-info' href='https://www.diurnal.com/NonUkResidents/Non-HCP/home' role='button' style='padding: 0.5rem 2rem; margin: 0 1rem'>Patients /<br>Public</a>",
                 "</div>"
             ],
-            "style": "text-align: left",
-            "class": "prod-1 rounded",
+            "style": "",
+            "class": "prod-1 rounded text-start",
             "id": "prod-1"
-        }
+    }
     ]
 }

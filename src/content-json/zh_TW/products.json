@@ -19,14 +19,14 @@
                 "   <li>TRINE Medicine：一家專注於為大中華區罕見疾病患者提供有效且負擔得起的治療解決方案的製藥公司，擁有 DIURNAL 產品在亞洲的獨家經銷權</li>",
                 "   <li>AMI：我們是一家藥品分銷公司，致力於為台灣罕見疾病患者提供有效且易於使用的治療解決方案，透過與 CITRINE Medicine 合作，擁有 DIURNAL 產品的分銷權</li>",
                 "</ul>",
-                "<div style='text-align: center'>",
+                "<div class='text-center mt-5'>",
                 "   <button id='prod-1-pro-btn-en' class='btn btn-primary' role='button' style='padding: 0.5rem 2rem; margin: 0 1rem'>您是<br>醫療專業人員</button>",
                 "   <a class='btn btn-info' href='https://www.diurnal.com/NonUkResidents/Non-HCP/home' role='button' style='padding: 0.5rem 2rem; margin: 0 1rem'>您是<br>病人或民眾</a>",
                 "</div>"
             ],
-            "style": "text-align: left",
-            "class": "prod-1 rounded",
+            "style": "",
+            "class": "prod-1 rounded text-start",
             "id": "prod-1"
-        }
+    }
     ]
 }

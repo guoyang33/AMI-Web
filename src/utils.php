@@ -59,7 +59,7 @@ function get_nav_dict() {
         ),
         'links' => array(
             'name' => array(
-                'zh_TW' => '友站連結',
+                'zh_TW' => '友善連結',
                 'en' => 'Links'
             ),
             'id' => '#links',
@@ -197,7 +197,7 @@ function show_medicine_infomation($dbh, $lang = 'en', $limit = 5, $offset = 0, $
             <tr>
                 <th class="col-sm-1">NO.</th>
                 <th class="text-center">主題</th>
-                <th class="col-sm-1">發布日期</th>
+                <th class="col-sm-2">發布日期</th>
             </tr>
             ';
             break;
@@ -206,7 +206,7 @@ function show_medicine_infomation($dbh, $lang = 'en', $limit = 5, $offset = 0, $
             <tr>
                 <th class="col-sm-1">NO.</th>
                 <th class="text-center">Subject</th>
-                <th class="col-sm-1">Date</th>
+                <th class="col-sm-2">Date</th>
             </tr>
             ';
     }
@@ -293,7 +293,7 @@ function show_news($dbh, $lang = 'en', $limit = 5, $offset = 0, $page_btn = fals
             <tr>
                 <th class="col-sm-1">NO.</th>
                 <th class="text-center">主題</th>
-                <th class="col-sm-1">發布日期</th>
+                <th class="col-sm-2">發布日期</th>
             </tr>
             ';
             break;
@@ -302,7 +302,7 @@ function show_news($dbh, $lang = 'en', $limit = 5, $offset = 0, $page_btn = fals
             <tr>
                 <th class="col-sm-1">NO.</th>
                 <th class="text-center">Subject</th>
-                <th class="col-sm-1">Date</th>
+                <th class="col-sm-2">Date</th>
             </tr>
             ';
     }

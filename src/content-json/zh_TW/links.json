@@ -1,0 +1,21 @@
+{
+    "title": "友善連結",
+    "links": [
+        {
+            "link": "https://www.fda.gov.tw/TC/index.aspx",
+            "text": "衛生福利部食品藥物管理署"
+        },
+        {
+            "link": "https://www.hpa.gov.tw/Home/Index.aspx",
+            "text": "衛生福利部國民健康署"
+        },
+        {
+            "link": "http://www.rarestonegroup.com/",
+            "text": "瑯鏵醫藥"
+        },
+        {
+            "link": "https://www.diurnal.com/",
+            "text": "DIURNAL Limited"
+        }
+    ]
+}

@@ -19,7 +19,7 @@ echo '
             </ul>
         </main>
 ';
-html_body_footer();
+html_body_footer($lang);
 echo '
         <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
         <script src="assets/dist/js/main.js"></script>

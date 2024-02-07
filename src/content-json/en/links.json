@@ -1,0 +1,21 @@
+{
+    "title": "Links",
+    "links": [
+        {
+            "link": "https://www.fda.gov.tw/TC/index.aspx",
+            "text": "Taiwan Food and Drug Administration"
+        },
+        {
+            "link": "https://www.hpa.gov.tw/EngPages/Index.aspx",
+            "text": "Health Promotion Administration, Ministry of Health and Welfare"
+        },
+        {
+            "link": "http://www.rarestonegroup.com/en/",
+            "text": "RareStone Capital"
+        },
+        {
+            "link": "https://www.diurnal.com/",
+            "text": "DIURNAL Limited"
+        }
+    ]
+}
