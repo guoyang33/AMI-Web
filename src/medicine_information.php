@@ -5,6 +5,12 @@ include 'html_head.php';
 $content_path = 'content-json/' . $lang . '/medicine_information.json';
 $content = json_decode(file_get_contents($content_path), true);
 
+$limit = 10;
+$offset = 0;
+if (isset($_GET['offset'])) {
+    $offset = intval($_GET['offset']);
+}
+
 echo '
     <body>
 ';
@@ -12,15 +18,9 @@ html_body_header(false, $lang);
 echo '
         <main>
             <div class="m-3">
-                <h2>' . $content['medicine_information']['title'] . '</h2>
+                <h1>' . $content['title'] . '</h1>
 ';
-show_medicine_infomation($dbh, $lang);
-echo '
-            </div>
-            <div class="m-3">
-                <h2>' . $content['news']['title'] . '</h2>
-';
-show_news($dbh, $lang);
+show_medicine_infomation($dbh, $lang, $limit, $offset, true);
 echo '
             </div>
         </main><!-- #news -->

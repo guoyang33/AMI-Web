@@ -12,13 +12,13 @@ html_body_header(false, $lang);
 echo '
         <main>
             <div class="m-3">
-                <h2>' . $content['medicine_information']['title'] . '</h2>
+                <h1>' . $content['medicine_information']['title'] . '</h1>
 ';
 show_medicine_infomation($dbh, $lang);
 echo '
             </div>
             <div class="m-3 mt-sm-5">
-                <h2>' . $content['news']['title'] . '</h2>
+                <h1>' . $content['news']['title'] . '</h1>
 ';
 show_news($dbh, $lang);
 echo '

@@ -95,7 +95,7 @@ function load_content_json($lang) {
     return json_decode(file_get_contents(CONTENT_JSON_DIR . $lang . '/' . $page . '.json'), true);
 }
 // 顯示網頁header
-function html_body_header($is_index = false, $lang = 'en') {
+function html_body_header($is_index = false, $lang = 'en', $show_lang = true) {
     $nav_dict = get_nav_dict();
     echo '
     <header>
@@ -125,16 +125,18 @@ function html_body_header($is_index = false, $lang = 'en') {
         </div>
         <div class="header-lang">
     ';
-    switch ($lang) {
-        case 'zh_TW':
-            echo '
-            <a href="?lang=en">English</a>
-            ';
-            break;
-        default:
-            echo '
-            <a href="?lang=zh_TW">切換至中文</a>
-            ';
+    if ($show_lang) {
+        switch ($lang) {
+            case 'zh_TW':
+                echo '
+                <a href="?lang=en">English</a>
+                ';
+                break;
+            default:
+                echo '
+                <a href="?lang=zh_TW">切換至中文</a>
+                ';
+        }
     }
     echo '
         </div>
@@ -183,7 +185,8 @@ function product_card($product) {
     echo '</div>' . "\n";
 }
 
-function show_medicine_infomation($dbh, $lang = 'en', $limit = 6, $offset = 0, $page_btn = false) {
+function show_medicine_infomation($dbh, $lang = 'en', $limit = 5, $offset = 0, $page_btn = false) {
+    $x_limit = $limit + 1;
     echo '
     <table class="table table-striped table-hover table-bordered">
         <thead>
@@ -211,32 +214,59 @@ function show_medicine_infomation($dbh, $lang = 'en', $limit = 6, $offset = 0, $
         </thead>
         <tbody>
     ';
-    $sth = $dbh->prepare("SELECT `id`, `subject`, `pub_date` FROM `medicine_information` ORDER BY `pub_date` ASC LIMIT :limit OFFSET :offset");
-    $sth->bindParam(':limit', $limit, PDO::PARAM_INT);
-    $sth->bindParam(':offset', $offset, PDO::PARAM_INT);
+    $sth = $dbh->prepare("SELECT `id`, `subject`, `pub_date` FROM `medicine_information` ORDER BY `pub_date` ASC LIMIT {$x_limit} OFFSET {$offset}");
     $sth->execute();
     $result = $sth->fetchAll(PDO::FETCH_ASSOC);
     if (count($result) > 0) {
         $i = 0;
         foreach ($result as $row) {
             $i++;
-            if ($i > 5) {
+            if ($i > $limit) {
                 break;
             }
             echo '
-            <tr style="cursor: pointer;" onclick="window.open(\'medicine_information_detail.php?id=' . $row['id'] . '\', \'_blank\')">
+            <tr style="cursor: pointer;" onclick="location.href=\'medicine_information_detail.php?id=' . $row['id'] . '\'">
                 <td>' . $row['id'] . '</td>
                 <td>' . $row['subject'] . '</td>
                 <td>' . $row['pub_date'] . '</td>
             </tr>
             ';
         }
-        if ($i > 5) {
-            echo '
-                <tr>
-                    <td colspan="3" class="text-center text-bg-primary" style="cursor: pointer;" onclick="location.href=\'medicine_information.php\'">More...</td>
-                </tr>
-            ';
+
+        if ($page_btn) {
+            switch ($lang) {
+                case 'zh_TW':
+                    echo '
+                    <tr>
+                        <td colspan="3">
+                            <div class="d-flex justify-content-center">
+                                <a href="?offset=' . ($offset - $limit) . '" class="btn btn-primary mx-1' . (($offset > 0) ? '' : ' d-none') . '">上一頁</a>
+                                <a href="?offset=' . ($offset + $limit) . '" class="btn btn-primary mx-1' . (($i > $limit) ? '' : ' d-none') . '">下一頁</a>
+                            </div>
+                        </td>
+                    </tr>
+                    ';
+                    break;
+                default:
+                    echo '
+                    <tr>
+                        <td colspan="3">
+                            <div class="d-flex justify-content-center">
+                                <a href="?offset=' . ($offset - $limit) . '" class="btn btn-primary mx-1' . (($offset > 0) ? '' : ' d-none') . '">Prev</a>
+                                <a href="?offset=' . ($offset + $limit) . '" class="btn btn-primary mx-1' . (($i > $limit) ? '' : ' d-none') . '">Next</a>
+                            </div>
+                        </td>
+                    </tr>
+                    ';
+            }
+        } else {
+            if ($i > $limit) {
+                echo '
+                    <tr>
+                        <td colspan="3" class="text-center text-bg-primary" style="cursor: pointer;" onclick="location.href=\'medicine_information.php\'">More...</td>
+                    </tr>
+                ';
+            }
         }
     } else {
         echo '
@@ -252,7 +282,6 @@ function show_medicine_infomation($dbh, $lang = 'en', $limit = 6, $offset = 0, $
 }
 
 function show_news($dbh, $lang = 'en', $limit = 5, $offset = 0, $page_btn = false) {
-    // 檢查是否有「更多」按鈕
     $x_limit = $limit + 1;
     echo '
     <table class="table table-striped table-hover table-bordered">
@@ -292,29 +321,45 @@ function show_news($dbh, $lang = 'en', $limit = 5, $offset = 0, $page_btn = fals
                 break;
             }
             echo '
-            <tr style="cursor: pointer;" onclick="window.open(\'news_detail.php?id=' . $row['id'] . '\', \'_blank\')">
+            <tr style="cursor: pointer;" onclick="location.href = \'news_detail.php?id=' . $row['id'] . '\'">
                 <td>' . $row['id'] . '</td>
                 <td>' . $row['subject'] . '</td>
                 <td>' . $row['pub_date'] . '</td>
             </tr>
             ';
         }
-        if ($i > $limit) {
-            if ($page_btn) {
-                echo '
+
+        if ($page_btn) {
+            switch ($lang) {
+                case 'zh_TW':
+                    echo '
                     <tr>
                         <td colspan="3">
-                ';
-                if ($offset > 0) {
-                    echo '
-                            <a href="?offset=' . ($offset - $limit) . '" class="btn btn-primary" style="margin-left: 1rem">Prev</a>
+                            <div class="d-flex justify-content-center">
+                                <a href="?offset=' . ($offset - $limit) . '" class="btn btn-primary mx-1' . (($offset > 0) ? '' : ' d-none') . '">上一頁</a>
+                                <a href="?offset=' . ($offset + $limit) . '" class="btn btn-primary mx-1' . (($i > $limit) ? '' : ' d-none') . '">下一頁</a>
+                            </div>
+                        </td>
+                    </tr>
                     ';
-                }
-
-            } else {
+                    break;
+                default:
+                    echo '
+                    <tr>
+                        <td colspan="3">
+                            <div class="d-flex justify-content-center">
+                                <a href="?offset=' . ($offset - $limit) . '" class="btn btn-primary mx-1' . (($offset > 0) ? '' : ' d-none') . '">Prev</a>
+                                <a href="?offset=' . ($offset + $limit) . '" class="btn btn-primary mx-1' . (($i > $limit) ? '' : ' d-none') . '">Next</a>
+                            </div>
+                        </td>
+                    </tr>
+                    ';
+            }
+        } else {
+            if ($i > $limit) {
                 echo '
                     <tr>
-                        <td colspan="3" class="text-center text-bg-primary" style="cursor: pointer;" onclick="window.open(\'news.php\', \'_blank\')">More...</td>
+                        <td colspan="3" class="text-center text-bg-primary" style="cursor: pointer;" onclick="location.href=\'news.php\'">More...</td>
                     </tr>
                 ';
             }
