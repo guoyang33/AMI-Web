@@ -108,7 +108,7 @@ function html_body_header($is_index = false, $lang = 'en', $show_lang = true) {
         if ($is_index) {
             echo '
                         <li class="nav-item">
-                            <a class="nav-link" href="' . $nav['id'] . '">' . $nav['name'][$lang] . '</a>
+                            <a class="nav-link " href="' . $nav['id'] . '">' . $nav['name'][$lang] . '</a>
                         </li>
             ';
         } else {
