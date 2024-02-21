@@ -119,6 +119,21 @@ function html_body_header($is_index = false, $lang = 'en', $show_lang = true) {
             ';
         }
     }
+    switch ($lang) {
+        case 'zh_TW':
+            echo '
+                        <li class="nav-item">
+                            <a class="nav-link" href="user_login.php">員工登入</a>
+                        </li>
+            ';
+            break;
+        default:
+            echo '
+                        <li class="nav-item">
+                            <a class="nav-link" href="user_login.php">Login</a>
+                        </li>
+            ';
+    }
     echo '
                 </ul>
             </nav>
