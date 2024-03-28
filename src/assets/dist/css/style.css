@@ -55,6 +55,7 @@ div.header-lang {
     display: flex;
     width: clamp(5rem, 15vw, 15rem);
     justify-content: end;
+    height: fit-content;
 }
 
 /* MAIN
