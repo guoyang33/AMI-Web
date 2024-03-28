@@ -2,6 +2,8 @@
 include 'html_head.php';
 require_once 'connect_db.php';
 
+session_start();
+
 // 已登入的使用者不得再登入
 if (isset($_SESSION['user_id'])) {
     header('Location: ./user_home.php');
@@ -18,9 +20,8 @@ if (key_exists('login', $_POST)) {
         $sth->execute();
         $user = $sth->fetch(PDO::FETCH_ASSOC);
         if ($user && password_verify($password, $user['password'])) {
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['username'] = $user['username'];
-            header('Location: ./user_home.php');
+            $_SESSION['user'] = $user;
+            header('Location: ./man/index.php');
             exit;
         }
     }
@@ -28,9 +29,10 @@ if (key_exists('login', $_POST)) {
 
 echo '
 <form action="./user_login.php" method="post">
-    <input type="text" name="username" placeholder="Username" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <input type="submit" name="login" value="Login">
+    <input type="hidden" name="login">
+    <input type="text" name="login[username]" placeholder="Username" required>
+    <input type="password" name="login[password]" placeholder="Password" required>
+    <input type="submit" value="Login">
 </form>
 ';
 
